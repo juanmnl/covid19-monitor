@@ -25,12 +25,6 @@ const App = () => {
           </div>
           <div>
             <h2>Ecuador</h2>
-            <p>
-              <small>
-                Última actualización: 19.03 | 10:00am |{' '}
-                <a href="https://twitter.com/Riesgos_Ec">RIESGOS EC</a>
-              </small>
-            </p>
             <Ecuador />
           </div>
           <footer>
