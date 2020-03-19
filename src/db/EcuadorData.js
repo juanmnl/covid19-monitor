@@ -3,7 +3,7 @@ const data = [
     id: 0,
     name: 'Azuay',
     capital: 'Cuenca',
-    confirmed: 7,
+    confirmed: 14,
     deaths: 0,
     compromised: 0,
     status: null,
@@ -21,21 +21,21 @@ const data = [
     compromised: 0,
     status: null,
     coord: {
-      lat: -1.6,
-      lng: -79.2
+      lat: -1.5,
+      lng: -79.25
     }
   },
   {
     id: 2,
     name: 'Cañar',
     capital: 'Azogues',
-    confirmed: 0,
+    confirmed: 3,
     deaths: 0,
     compromised: 0,
     status: null,
     coord: {
-      lat: 0,
-      lng: 0
+      lat: -2.37,
+      lng: -79.2
     }
   },
   {
@@ -55,13 +55,13 @@ const data = [
     id: 4,
     name: 'Chimborazo',
     capital: 'Riobamba',
-    confirmed: 0,
+    confirmed: 2,
     deaths: 0,
     compromised: 0,
     status: null,
     coord: {
-      lat: 0,
-      lng: 0
+      lat: -1.7,
+      lng: -78.85
     }
   },
   {
@@ -120,7 +120,7 @@ const data = [
     id: 9,
     name: 'Guayas',
     capital: 'Guayaquil',
-    confirmed: 157,
+    confirmed: 187,
     deaths: 0,
     compromised: 0,
     status: 'alert',
@@ -133,38 +133,38 @@ const data = [
     id: 10,
     name: 'Imbabura',
     capital: 'Ibarra',
-    confirmed: 0,
+    confirmed: 1,
     deaths: 0,
     compromised: 0,
     status: null,
     coord: {
-      lat: -0.038,
-      lng: -78.659
+      lat: 0.65,
+      lng: -78.4
     }
   },
   {
     id: 11,
     name: 'Loja',
     capital: 'Loja',
-    confirmed: 0,
+    confirmed: 4,
     deaths: 0,
     compromised: 0,
     status: null,
     coord: {
-      lat: -0.038,
-      lng: -78.659
+      lat: -3.7,
+      lng: -79.5
     }
   },
   {
     id: 12,
     name: 'Los Ríos',
     capital: 'Babahoyo',
-    confirmed: 10,
+    confirmed: 16,
     deaths: 0,
     compromised: 0,
     status: null,
     coord: {
-      lat: -1.6,
+      lat: -1.45,
       lng: -79.7
     }
   },
@@ -185,7 +185,7 @@ const data = [
     id: 14,
     name: 'Morona Santiago',
     capital: 'Macas',
-    confirmed: 1,
+    confirmed: 3,
     deaths: 0,
     compromised: 0,
     status: null,
@@ -237,7 +237,7 @@ const data = [
     id: 18,
     name: 'Pichincha',
     capital: 'Quito',
-    confirmed: 12,
+    confirmed: 16,
     deaths: 0,
     compromised: 0,
     status: null,
@@ -263,20 +263,20 @@ const data = [
     id: 20,
     name: 'Santo Domingo de los Tsáchilas',
     capital: 'Santo Domingo',
-    confirmed: 0,
+    confirmed: 1,
     deaths: 0,
     compromised: 0,
     status: null,
     coord: {
-      lat: 0,
-      lng: 0
+      lat: -0.08,
+      lng: -79.29
     }
   },
   {
     id: 21,
     name: 'Sucumbíos',
     capital: 'Nueva Loja',
-    confirmed: 1,
+    confirmed: 2,
     deaths: 0,
     compromised: 0,
     status: null,
