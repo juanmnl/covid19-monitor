@@ -36,7 +36,7 @@ const App = () => {
         </section>
         <section>
           <SubScreen />
-          <Map lat={-1.8} lng={-78.2} z={6.3} />
+          <Map lat={-1.78} lng={-78.5} z={6.3} />
         </section>
       </main>
     </>

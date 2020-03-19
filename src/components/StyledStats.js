@@ -71,6 +71,10 @@ export const Row = styled.li`
   :nth-of-type(4) {
     color: var(--color-secondary);
   }
+  @media (max-width: 960px) {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
 
   span {
     display: inline-block;

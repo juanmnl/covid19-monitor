@@ -86,6 +86,10 @@ export const GlobalStyle = createGlobalStyle`
     padding: .5rem;
     border: 4px solid var(--color-primary);
 
+    @media(max-width: 960px) {
+      padding: 0;
+    }
+
     > section {
       position: relative;
       display: flex;
@@ -113,6 +117,10 @@ export const GlobalStyle = createGlobalStyle`
             margin-top: 0;
           }
         }
+      }
+
+      @media(max-width: 960px) {
+        margin: 0;
       }
 
       > div {
