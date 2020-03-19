@@ -104,6 +104,7 @@ export const GlobalStyle = createGlobalStyle`
 
       :first-of-type {
         overflow-y: scroll;
+        -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
       }
 
       :last-of-type {
@@ -130,6 +131,10 @@ export const GlobalStyle = createGlobalStyle`
           margin-top: 1rem;
         }
       }
+    }
+
+    footer {
+      padding-bottom: 2rem;
     }
 
     @media (max-width: 960px) {

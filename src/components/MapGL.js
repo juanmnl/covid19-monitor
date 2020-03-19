@@ -60,7 +60,7 @@ export default function Map({ lat, lng, z }) {
               />
               <text
                 x="20"
-                y="24"
+                y="25"
                 fontFamily="sans-serif"
                 fontSize="16px"
                 fill="black"

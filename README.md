@@ -15,3 +15,4 @@ TODO
 - add db (light table or google sheets)
 - add information pages
 - add studies
+- fix firefox scrolling behaviour on left section

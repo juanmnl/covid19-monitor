@@ -111,7 +111,7 @@ const data = [
     id: 9,
     name: 'Guayas',
     capital: 'Guayaquil',
-    confirmed: 119,
+    confirmed: 128,
     deaths: 0,
     compromised: 0,
     coord: {
@@ -219,7 +219,7 @@ const data = [
     id: 18,
     name: 'Pichincha',
     capital: 'Quito',
-    confirmed: 8,
+    confirmed: 12,
     deaths: 0,
     compromised: 0,
     coord: {
