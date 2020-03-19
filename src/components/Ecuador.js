@@ -16,6 +16,12 @@ export default function Ecuador() {
 
   return (
     <>
+      <p>
+        <small>
+          Última actualización: 19.03 | 16:10 |{' '}
+          <a href="https://twitter.com/Riesgos_Ec">RIESGOS EC</a>
+        </small>
+      </p>
       <StatGrid>
         <StatBlock>
           <p>260</p>
