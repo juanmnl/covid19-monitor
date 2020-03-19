@@ -3,7 +3,7 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root {
     --color-primary: hsla(163, 72%, 48%, 1.0);
-    --color-secondary: hsla(50, 100%, 54%, 1.0);
+    --color-secondary: hsla(50, 100%, 64%, 1.0);
     --color-warning: hsla(25, 100%, 67%, 1.0);
     --color-danger: hsla(0, 100%, 67%, 1.0);
     --color-background: hsla(164, 23%, 13%, 1.0);

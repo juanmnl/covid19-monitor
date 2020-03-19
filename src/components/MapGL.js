@@ -10,7 +10,7 @@ const sortedProvinces = provinces.sort((a, b) => {
   return b.confirmed - a.confirmed;
 });
 
-var confirmedProvinces = [];
+let confirmedProvinces = [];
 
 sortedProvinces.forEach(province => {
   if (province.confirmed > 0) {
@@ -45,24 +45,28 @@ export default function Map({ lat, lng, z }) {
             longitude={point.coord.lng}
           >
             <svg
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
+              width={point.status === 'alert' ? '80' : '40'}
+              height={point.status === 'alert' ? '80' : '40'}
+              viewBox={point.status === 'alert' ? '0 0 80 80' : '0 0 40 40'}
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <circle
-                cx="20"
-                cy="20"
-                r="20"
-                fill="hsla(50, 100%, 54%, 1.0)"
+                cx={point.status === 'alert' ? '40' : '20'}
+                cy={point.status === 'alert' ? '40' : '20'}
+                r={point.status === 'alert' ? '40' : '20'}
+                fill={
+                  point.status === 'alert'
+                    ? 'hsla(0, 100%, 67%, 8.0)'
+                    : 'hsla(50, 100%, 54%, 8.0)'
+                }
                 fillOpacity="0.6"
               />
               <text
-                x="20"
-                y="25"
+                x={point.status === 'alert' ? '40' : '20'}
+                y={point.status === 'alert' ? '45' : '25'}
                 fontFamily="sans-serif"
-                fontSize="16px"
+                fontSize={point.status === 'alert' ? '18px' : '16px'}
                 fill="black"
                 textAnchor="middle"
               >

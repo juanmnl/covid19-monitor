@@ -6,6 +6,7 @@ const data = [
     confirmed: 5,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -2.75,
       lng: -79.26
@@ -18,6 +19,7 @@ const data = [
     confirmed: 2,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -1.6,
       lng: -79.2
@@ -30,6 +32,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -42,6 +45,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -54,6 +58,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -66,6 +71,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -78,6 +84,7 @@ const data = [
     confirmed: 1,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -3.4,
       lng: -79.9
@@ -90,6 +97,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -0.038,
       lng: -78.659
@@ -102,6 +110,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -0.038,
       lng: -78.659
@@ -114,9 +123,10 @@ const data = [
     confirmed: 128,
     deaths: 0,
     compromised: 0,
+    status: 'alert',
     coord: {
-      lat: -1.98,
-      lng: -80
+      lat: -1.95,
+      lng: -80.18
     }
   },
   {
@@ -126,6 +136,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -0.038,
       lng: -78.659
@@ -138,6 +149,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -0.038,
       lng: -78.659
@@ -150,6 +162,7 @@ const data = [
     confirmed: 10,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -1.6,
       lng: -79.7
@@ -162,6 +175,7 @@ const data = [
     confirmed: 8,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -0.8,
       lng: -80.4
@@ -174,6 +188,7 @@ const data = [
     confirmed: 1,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -2.4,
       lng: -78.18
@@ -186,6 +201,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -0.038,
       lng: -78.659
@@ -198,6 +214,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -210,6 +227,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -222,6 +240,7 @@ const data = [
     confirmed: 12,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: -0.038,
       lng: -78.659
@@ -234,6 +253,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -246,6 +266,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -258,6 +279,7 @@ const data = [
     confirmed: 1,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0.18,
       lng: -77.4
@@ -270,6 +292,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
@@ -282,6 +305,7 @@ const data = [
     confirmed: 0,
     deaths: 0,
     compromised: 0,
+    status: null,
     coord: {
       lat: 0,
       lng: 0
