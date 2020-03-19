@@ -43,6 +43,7 @@ export const StatBlock = styled.article`
 
   @media (max-width: 960px) {
     margin: 0.5rem 0rem;
+    text-align: center;
   }
 `;
 
