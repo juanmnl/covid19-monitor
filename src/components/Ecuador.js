@@ -18,7 +18,7 @@ export default function Ecuador() {
     <>
       <StatGrid>
         <StatBlock>
-          <p>168</p>
+          <p>199</p>
           <h3>Confirmados</h3>
         </StatBlock>
         <StatBlock>
@@ -30,11 +30,11 @@ export default function Ecuador() {
           <h3>Cerco</h3>
         </StatBlock>
         <StatBlock>
-          <p>283</p>
+          <p>320</p>
           <h3>Sospecha</h3>
         </StatBlock>
         <StatBlock>
-          <p>312</p>
+          <p>336</p>
           <h3>Descartados</h3>
         </StatBlock>
         <StatBlock>
