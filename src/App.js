@@ -15,17 +15,17 @@ const isActive = ({ isCurrent }) => {
 const Nav = styled.nav`
   background-color: hsla(164, 23%, 10%, 1);
   margin: 0.5rem 0;
-  flex: 1rem;
-  padding: 0.2rem 0;
+  padding: 0.2rem 0.3rem;
   border-radius: 2px;
   text-align: right;
 
   > a {
     font-weight: bolder;
     padding: 0.2rem 0.6rem;
-    font-size: 0.78rem;
+    font-size: 0.8rem;
+    line-height: 1.6rem;
     text-transform: uppercase;
-    margin: 0 0.2rem;
+    margin-left: 0.4rem;
     text-decoration: none;
     background-color: transparent;
     transition: 280ms background-color ease-in-out;
