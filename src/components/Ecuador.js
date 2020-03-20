@@ -14,6 +14,15 @@ export default function Ecuador() {
     return b.confirmed - a.confirmed;
   });
 
+  const dataTotals = {
+    confirmed: 260,
+    deaths: 4,
+    surveillance: 746,
+    suspicious: 481,
+    negatives: 336,
+    recoveries: 3
+  };
+
   return (
     <>
       <p>
@@ -24,27 +33,27 @@ export default function Ecuador() {
       </p>
       <StatGrid>
         <StatBlock>
-          <p>260</p>
+          <p>{dataTotals.confirmed}</p>
           <h3>Confirmados</h3>
         </StatBlock>
         <StatBlock>
-          <p>4</p>
+          <p>{dataTotals.deaths}</p>
           <h3>Decesos</h3>
         </StatBlock>
         <StatBlock>
-          <p>746</p>
+          <p>{dataTotals.surveillance}</p>
           <h3>Cerco</h3>
         </StatBlock>
         <StatBlock>
-          <p>481</p>
+          <p>{dataTotals.suspicious}</p>
           <h3>Sospecha</h3>
         </StatBlock>
         <StatBlock>
-          <p>336</p>
+          <p>{dataTotals.negatives}</p>
           <h3>Descartados</h3>
         </StatBlock>
         <StatBlock>
-          <p>3</p>
+          <p>{dataTotals.recoveries}</p>
           <h3>Recuperados</h3>
         </StatBlock>
       </StatGrid>
