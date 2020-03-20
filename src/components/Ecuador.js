@@ -15,11 +15,11 @@ export default function Ecuador() {
   });
 
   const dataTotals = {
-    confirmed: 260,
-    deaths: 4,
+    confirmed: 317,
+    deaths: 5,
     surveillance: 746,
-    suspicious: 481,
-    negatives: 336,
+    suspicious: 582,
+    negatives: 483,
     recoveries: 3
   };
 
@@ -27,7 +27,7 @@ export default function Ecuador() {
     <>
       <p>
         <small>
-          Última actualización: 19.03 | 16:10 |{' '}
+          Última actualización: 20.03 | 10:00am |{' '}
           <a href="https://twitter.com/Riesgos_Ec">RIESGOS EC</a>
         </small>
       </p>
