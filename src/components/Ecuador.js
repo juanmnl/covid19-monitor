@@ -20,7 +20,8 @@ export default function Ecuador() {
     surveillance: 746,
     suspicious: 582,
     negatives: 483,
-    recoveries: 3
+    recoveries: 3,
+    tests: 1432
   };
 
   return (
@@ -55,6 +56,12 @@ export default function Ecuador() {
         <StatBlock>
           <p>{dataTotals.recoveries}</p>
           <h3>Recuperados</h3>
+        </StatBlock>
+        <StatBlock>
+          <p>
+            {dataTotals.confirmed} / {dataTotals.tests}
+          </p>
+          <h3>Positivos : Pruebas</h3>
         </StatBlock>
       </StatGrid>
       <hr />

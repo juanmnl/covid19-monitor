@@ -242,7 +242,7 @@ const data = [
     compromised: 0,
     status: null,
     coord: {
-      lat: -0.038,
+      lat: -0.0,
       lng: -78.659
     }
   },
@@ -256,7 +256,7 @@ const data = [
     status: null,
     coord: {
       lat: -1.95,
-      lng: -80.6
+      lng: -80.8
     }
   },
   {
@@ -269,7 +269,7 @@ const data = [
     status: null,
     coord: {
       lat: -0.08,
-      lng: -79.29
+      lng: -79.32
     }
   },
   {
