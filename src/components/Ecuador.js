@@ -33,11 +33,11 @@ export default function Ecuador() {
         </small>
       </p>
       <StatGrid>
-        <StatBlock>
+        <StatBlock className="warning">
           <p>{dataTotals.confirmed}</p>
           <h3>Confirmados</h3>
         </StatBlock>
-        <StatBlock>
+        <StatBlock className="danger">
           <p>{dataTotals.deaths}</p>
           <h3>Decesos</h3>
         </StatBlock>

@@ -76,7 +76,12 @@ const App = () => {
           </div>
 
           <div>
-            <h2>Ecuador</h2>
+            <h2>
+              Ecuador{' '}
+              <span role="img" aria-label="Ecuador Flag">
+                🇪🇨
+              </span>
+            </h2>
             <Ecuador />
           </div>
           <footer>

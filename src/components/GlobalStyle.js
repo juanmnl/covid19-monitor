@@ -53,7 +53,7 @@ export const GlobalStyle = createGlobalStyle`
 
   h2 {
     font-size: 1.5rem;
-    color: var(--color-secondary);
+    color: var(--color-primary);
     border-radius: 1px;
     line-height: 1.7rem;
     margin-bottom: .2rem;
@@ -134,6 +134,14 @@ export const GlobalStyle = createGlobalStyle`
 
     footer {
       padding-bottom: 2rem;
+    }
+
+    .danger {
+      color: var(--color-danger);
+    }
+
+    .warning {
+      color: var(--color-warning);
     }
 
     @media (max-width: 960px) {
