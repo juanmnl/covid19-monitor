@@ -24,6 +24,8 @@ export default function Ecuador() {
     tests: 1432
   };
 
+  var result = (dataTotals.confirmed / dataTotals.tests) * 100;
+
   return (
     <>
       <p>
@@ -59,9 +61,13 @@ export default function Ecuador() {
         </StatBlock>
         <StatBlock>
           <p>
-            {dataTotals.confirmed} / {dataTotals.tests}
+            {dataTotals.confirmed}/{dataTotals.tests}
           </p>
           <h3>Positivos : Pruebas</h3>
+        </StatBlock>
+        <StatBlock>
+          <p>{result.toFixed(2)}% </p>
+          <h3>Relación</h3>
         </StatBlock>
       </StatGrid>
       <br />
