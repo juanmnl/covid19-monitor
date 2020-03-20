@@ -128,6 +128,7 @@ export const GlobalStyle = createGlobalStyle`
 
       > div {
         margin-top: 1rem;
+
       }
     }
 
