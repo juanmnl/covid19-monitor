@@ -64,8 +64,7 @@ export default function Ecuador() {
           <h3>Positivos : Pruebas</h3>
         </StatBlock>
       </StatGrid>
-      <hr />
-
+      <br />
       <h4>Provincias / Confirmados</h4>
       <TwoCols>
         {sortedProvinces.map(province => (
@@ -76,7 +75,6 @@ export default function Ecuador() {
           </Row>
         ))}
       </TwoCols>
-
       <hr />
     </>
   );
