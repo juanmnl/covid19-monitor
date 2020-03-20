@@ -16,13 +16,15 @@ const Nav = styled.nav`
   display: flex;
   justify-content: flex-end;
   background-color: hsla(164, 23%, 10%, 1);
+  margin: 0.5rem 0;
+  flex: 1rem;
   padding: 0.2rem 0;
   border-radius: 2px;
 
   > a {
     font-weight: bolder;
     padding: 0.2rem 0.6rem;
-    font-size: 0.7rem;
+    font-size: 0.84rem;
     text-transform: uppercase;
     margin: 0 0.2rem;
     text-decoration: none;
@@ -66,7 +68,7 @@ const App = () => {
               Mapa
             </Link>
             <Link to="charts" getProps={isActive}>
-              Gráficas
+              Contágios/Día
             </Link>
           </Nav>
           <div>

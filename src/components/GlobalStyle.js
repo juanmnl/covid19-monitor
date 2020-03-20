@@ -47,7 +47,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @media (max-width: 960px) {
-      font-size: 1.2rem;
+      font-size: .8rem;
     }
   }
 
@@ -128,10 +128,6 @@ export const GlobalStyle = createGlobalStyle`
 
       > div {
         margin-top: 1rem;
-        
-       > * {
-          margin-top: 1rem;
-        }
       }
     }
 
