@@ -261,7 +261,7 @@ const data = [
   },
   {
     id: 20,
-    name: 'Santo Domingo de los Tsáchilas',
+    name: 'Santo Domingo',
     capital: 'Santo Domingo',
     confirmed: 1,
     deaths: 0,

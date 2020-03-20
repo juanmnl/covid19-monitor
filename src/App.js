@@ -3,7 +3,10 @@ import { ShowWindowDimensions } from '../src/hooks/useWindowSize';
 import Stats from '../src/components/Stats';
 import Ecuador from '../src/components/Ecuador';
 import MapSection from '../src/components/MapSection';
-import Charts from '../src/components/Charts';
+import {
+  ConfirmedChart,
+  ConfirmedByProvinceChart
+} from '../src/components/Charts';
 import { GlobalStyle } from '../src/components/GlobalStyle';
 import { Router, Link } from '@reach/router';
 import styled from 'styled-components';
@@ -66,8 +69,11 @@ const App = () => {
             <Link to="/" getProps={isActive}>
               Mapa
             </Link>
-            <Link to="charts" getProps={isActive}>
-              Contágios/Día
+            <Link to="contagios-provincia" getProps={isActive}>
+              X Provincia
+            </Link>
+            <Link to="contagios" getProps={isActive}>
+              X Día
             </Link>
           </Nav>
           <div>
@@ -94,7 +100,8 @@ const App = () => {
         <section>
           <Router>
             <MapSection path="/" />
-            <Charts path="/charts" />
+            <ConfirmedChart path="/contagios" />
+            <ConfirmedByProvinceChart path="/contagios-provincia" />
           </Router>
         </section>
       </main>

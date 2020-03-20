@@ -1,8 +1,16 @@
 import React from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, HorizontalBar } from 'react-chartjs-2';
 import styled from 'styled-components';
+import EcuadorData from '../db/EcuadorData';
 
-const data = {
+const ChartSection = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 0 0.3rem 0.7rem 0;
+  display: flex;
+`;
+
+const confirmed = {
   labels: [
     '28.02',
     '29.02',
@@ -63,25 +71,53 @@ const data = {
   ]
 };
 
-const ChartSection = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 0 0.3rem 0.7rem 0;
-`;
-
-function Charts() {
+export function ConfirmedChart() {
   return (
-    <ChartSection>
-      <Bar
-        data={data}
-        width={100}
-        height={50}
-        options={{
-          maintainAspectRatio: false
-        }}
-      />
-    </ChartSection>
+    <>
+      <ChartSection>
+        <Bar
+          data={confirmed}
+          width={100}
+          height={50}
+          options={{
+            maintainAspectRatio: false
+          }}
+        />
+      </ChartSection>
+    </>
   );
 }
 
-export default Charts;
+const labels = EcuadorData.map(province => province.name);
+const confirmedCases = EcuadorData.map(province => province.confirmed);
+const confirmedByProvince = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Confirmados',
+      backgroundColor: 'hsla(163, 72%, 48%, .4)',
+      borderColor: 'hsla(163, 72%, 48%, 1.0)',
+      borderWidth: 1,
+      hoverBackgroundColor: 'hsla(163, 72%, 48%, .9)',
+      hoverBorderColor: 'hsla(163, 72%, 48%, 1)',
+      data: confirmedCases
+    }
+  ]
+};
+
+export function ConfirmedByProvinceChart() {
+  return (
+    <>
+      <ChartSection>
+        <HorizontalBar
+          data={confirmedByProvince}
+          width={100}
+          height={50}
+          options={{
+            maintainAspectRatio: false
+          }}
+        />
+      </ChartSection>
+    </>
+  );
+}
