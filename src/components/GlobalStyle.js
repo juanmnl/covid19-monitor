@@ -56,6 +56,7 @@ export const GlobalStyle = createGlobalStyle`
     color: var(--color-secondary);
     border-radius: 1px;
     line-height: 1.7rem;
+    margin-bottom: .2rem;
     opacity: .8;
     @media (max-width: 960px) {
       font-size: 1rem;
@@ -104,7 +105,6 @@ export const GlobalStyle = createGlobalStyle`
 
       :first-of-type {
         overflow-y: scroll;
-        -webkit-overflow-scrolling: touch; /* Lets it scroll lazy */
       }
 
       :last-of-type {
@@ -112,7 +112,9 @@ export const GlobalStyle = createGlobalStyle`
         overflow: hidden;
         
         > div {
-        margin-top: 0;
+          margin-top: 0;
+          width: 100%;
+          height: 100%;
 
         > * {
             margin-top: 0;
