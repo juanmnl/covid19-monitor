@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../node_modules/react-vis/dist/style.css';
 import { Bar } from 'react-chartjs-2';
 
 const data = {
