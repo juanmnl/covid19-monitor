@@ -40,11 +40,11 @@ export default function Map({ lat, lng, z }) {
         return (
           <Marker
             key={point.name}
-            className="on"
             latitude={point.coord.lat}
             longitude={point.coord.lng}
           >
             <svg
+              className="on"
               width={point.status === 'alert' ? '100' : '40'}
               height={point.status === 'alert' ? '100' : '40'}
               viewBox={point.status === 'alert' ? '0 0 100 100' : '0 0 40 40'}

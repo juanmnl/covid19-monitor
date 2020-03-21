@@ -51,11 +51,18 @@ const confirmed = {
   datasets: [
     {
       label: 'Confirmados',
+      type: 'line',
+      pointBorderColor: 'hsla(163, 72%, 48%, 1.0)',
+      pointBackgroundColor: 'hsla(163, 72%, 48%, 0.7)',
       backgroundColor: 'hsla(163, 72%, 48%, .4)',
       borderColor: 'hsla(163, 72%, 48%, 1.0)',
       borderWidth: 1,
       hoverBackgroundColor: 'hsla(163, 72%, 48%, .9)',
       hoverBorderColor: 'hsla(163, 72%, 48%, 1)',
+      pointRadius: 6,
+      pointStyle: 'mitter',
+      showLines: false,
+      lineTension: 0.1,
       data: [
         0,
         1,
