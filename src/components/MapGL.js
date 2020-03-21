@@ -45,16 +45,16 @@ export default function Map({ lat, lng, z }) {
             longitude={point.coord.lng}
           >
             <svg
-              width={point.status === 'alert' ? '80' : '40'}
-              height={point.status === 'alert' ? '80' : '40'}
-              viewBox={point.status === 'alert' ? '0 0 80 80' : '0 0 40 40'}
+              width={point.status === 'alert' ? '100' : '40'}
+              height={point.status === 'alert' ? '100' : '40'}
+              viewBox={point.status === 'alert' ? '0 0 100 100' : '0 0 40 40'}
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <circle
-                cx={point.status === 'alert' ? '40' : '20'}
-                cy={point.status === 'alert' ? '40' : '20'}
-                r={point.status === 'alert' ? '40' : '20'}
+                cx={point.status === 'alert' ? '50' : '20'}
+                cy={point.status === 'alert' ? '50' : '20'}
+                r={point.status === 'alert' ? '50' : '20'}
                 fill={
                   point.status === 'alert'
                     ? 'hsla(0, 100%, 67%, 8.0)'
@@ -63,8 +63,8 @@ export default function Map({ lat, lng, z }) {
                 fillOpacity="0.6"
               />
               <text
-                x={point.status === 'alert' ? '40' : '20'}
-                y={point.status === 'alert' ? '45' : '25'}
+                x={point.status === 'alert' ? '50' : '20'}
+                y={point.status === 'alert' ? '55' : '25'}
                 fontFamily="sans-serif"
                 fontSize={point.status === 'alert' ? '18px' : '16px'}
                 fill="black"

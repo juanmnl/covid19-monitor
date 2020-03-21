@@ -5,7 +5,8 @@ import Ecuador from '../src/components/Ecuador';
 import MapSection from '../src/components/MapSection';
 import {
   ConfirmedChart,
-  ConfirmedByProvinceChart
+  ConfirmedByProvinceChart,
+  DetailsChart
 } from '../src/components/Charts';
 import { GlobalStyle } from '../src/components/GlobalStyle';
 import { Router, Link } from '@reach/router';
@@ -20,7 +21,10 @@ const Nav = styled.nav`
   margin: 0.5rem 0;
   padding: 0.2rem 0.3rem;
   border-radius: 2px;
-  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
 
   > a {
     font-weight: bolder;
@@ -75,6 +79,9 @@ const App = () => {
             <Link to="contagios" getProps={isActive}>
               X Día
             </Link>
+            <Link to="detalles" getProps={isActive}>
+              Detalle Confirmados
+            </Link>
           </Nav>
           <div>
             <h2>Mundo</h2>
@@ -102,6 +109,7 @@ const App = () => {
             <MapSection path="/" />
             <ConfirmedChart path="/contagios" />
             <ConfirmedByProvinceChart path="/contagios-provincia" />
+            <DetailsChart path="/detalles" />
           </Router>
         </section>
       </main>

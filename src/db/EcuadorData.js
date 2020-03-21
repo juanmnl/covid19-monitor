@@ -125,8 +125,8 @@ const data = [
     compromised: 0,
     status: 'alert',
     coord: {
-      lat: -1.95,
-      lng: -80.18
+      lat: -1.91,
+      lng: -80.28
     }
   },
   {
