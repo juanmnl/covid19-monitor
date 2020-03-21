@@ -64,7 +64,7 @@ const confirmed = {
       pointRadius: 6,
       pointStyle: 'mitter',
       showLines: false,
-      lineTension: 0.1,
+      lineTension: 0.4,
       data: [
         0,
         1,
@@ -88,7 +88,7 @@ const confirmed = {
         57,
         92,
         216,
-        80
+        106
       ]
     }
   ]
@@ -180,7 +180,7 @@ const data = {
   ],
   datasets: [
     {
-      data: [3, 479, 10, 7, 7],
+      data: [3, 502, 5, 15, 7],
       borderColor: 'hsla(164, 23%, 3%, 0.6)',
       backgroundColor: [
         'hsla(163, 72%, 100%, 0.9)',
