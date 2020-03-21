@@ -13,20 +13,21 @@ export const StatBlock = styled.article`
   display: flex;
   flex: 1;
   flex-direction: column;
-  padding: 0.8rem 1rem;
+  padding: 0.6rem 0.8rem;
   box-shadow: 0 1px 3px hsla(163, 72%, 0%, 0.5),
     0 -1px 0 hsla(163, 72%, 48%, 0.7);
   border-radius: 2px;
   transition: box-shadow 150ms ease-in;
   text-align: right;
   transition: all 200ms ease-out;
-  margin: 0.5rem;
+  margin: 0.3rem;
 
   > h3 {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
     margin: 0;
     font-weight: 300;
+    display: inline-block;
   }
 
   > p {

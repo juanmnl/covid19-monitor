@@ -32,7 +32,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     text-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.7), 0 -1px 0 hsla(0, 0%, 100%, 0.5);
     color: var(--color-secondary);
     font-weight: 900;

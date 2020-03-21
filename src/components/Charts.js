@@ -47,7 +47,8 @@ const confirmed = {
     '17.03',
     '18.03',
     '19.03',
-    '20.03'
+    '20.03',
+    '21.03'
   ],
   datasets: [
     {
@@ -86,7 +87,8 @@ const confirmed = {
         53,
         57,
         92,
-        216
+        216,
+        80
       ]
     }
   ]
@@ -110,6 +112,13 @@ export function ConfirmedChart() {
               labels: {
                 fontColor: 'hsla(163, 72%, 48%, 1)'
               }
+            },
+            scales: {
+              yAxes: [
+                {
+                  // type: 'logarithmic'
+                }
+              ]
             }
           }}
         />
@@ -171,7 +180,7 @@ const data = {
   ],
   datasets: [
     {
-      data: [3, 399, 10, 7, 7],
+      data: [3, 479, 10, 7, 7],
       borderColor: 'hsla(164, 23%, 3%, 0.6)',
       backgroundColor: [
         'hsla(163, 72%, 100%, 0.9)',
