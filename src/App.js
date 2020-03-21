@@ -21,10 +21,7 @@ const Nav = styled.nav`
   margin: 0.5rem 0;
   padding: 0.2rem 0.3rem;
   border-radius: 2px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  align-items: center;
+  text-align: right;
 
   > a {
     font-weight: bolder;
