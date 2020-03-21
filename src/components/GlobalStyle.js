@@ -124,6 +124,14 @@ export const GlobalStyle = createGlobalStyle`
 
       @media(max-width: 960px) {
         margin: 0;
+        
+        :first-of-type {
+          flex: 2;
+        }
+
+        :last-of-type {
+          flex: 3;
+        }
       }
 
       > div {

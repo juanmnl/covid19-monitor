@@ -8,6 +8,7 @@ const ChartSection = styled.div`
   height: 100%;
   padding: 0 0.3rem 0.7rem 0;
   display: flex;
+  position: relative;
 `;
 
 const ChartPieSection = styled.div`
