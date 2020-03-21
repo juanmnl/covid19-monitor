@@ -24,6 +24,7 @@ const Nav = styled.nav`
   text-align: right;
 
   > a {
+    display: inline-block;
     font-weight: bolder;
     padding: 0.2rem 0.6rem;
     font-size: 0.8rem;
