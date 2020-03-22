@@ -156,7 +156,7 @@ const data = [
     }
   },
   {
-    id: 19,
+    id: 12,
     name: 'Los Ríos',
     capital: 'Babahoyo',
     confirmed: 25,
