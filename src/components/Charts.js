@@ -48,7 +48,8 @@ const confirmed = {
     '18.03',
     '19.03',
     '20.03',
-    '21.03'
+    '21.03',
+    '22.03'
   ],
   datasets: [
     {
@@ -88,7 +89,8 @@ const confirmed = {
         57,
         92,
         216,
-        106
+        106,
+        257
       ]
     }
   ]
@@ -180,7 +182,7 @@ const data = {
   ],
   datasets: [
     {
-      data: [3, 502, 5, 15, 7],
+      data: [3, 701, 54, 17, 14],
       borderColor: 'hsla(164, 23%, 3%, 0.6)',
       backgroundColor: [
         'hsla(163, 72%, 100%, 0.9)',

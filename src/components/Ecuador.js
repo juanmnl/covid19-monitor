@@ -15,13 +15,13 @@ export default function Ecuador() {
   });
 
   const dataTotals = {
-    confirmed: 532,
-    deaths: 7,
-    surveillance: 1213,
-    suspicious: 870,
-    negatives: 649,
+    confirmed: 789,
+    deaths: 14,
+    surveillance: 1347,
+    suspicious: 699,
+    negatives: 872,
     recoveries: 3,
-    tests: 2051
+    tests: 23060
   };
 
   var result = (dataTotals.confirmed / dataTotals.tests) * 100;
