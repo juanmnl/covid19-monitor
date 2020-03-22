@@ -21,7 +21,7 @@ export default function Ecuador() {
     suspicious: 699,
     negatives: 872,
     recoveries: 3,
-    tests: 23060
+    tests: 2360
   };
 
   var result = (dataTotals.confirmed / dataTotals.tests) * 100;
