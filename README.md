@@ -20,7 +20,7 @@ TODO
 Para dev
 
 - crear token en mapbox.com
-- agregar a .env.local
+- agregar a `/.env.local`
 
 ```
 REACT_APP_MAPBOX_ACCESS_TOKEN=token
