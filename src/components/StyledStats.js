@@ -89,11 +89,9 @@ export const Row = styled.li`
 export const TwoCols = styled.ol`
   padding-left: 0;
   columns: 2;
-  -webkit-columns: 2;
-  -moz-columns: 2;
+  margin-bottom: 2rem;
+
   @media (max-width: 960px) {
     columns: 1;
-    -webkit-columns: 1;
-    -moz-columns: 1;
   }
 `;

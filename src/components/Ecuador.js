@@ -80,7 +80,6 @@ export default function Ecuador() {
           </Row>
         ))}
       </TwoCols>
-      <hr />
     </>
   );
 }

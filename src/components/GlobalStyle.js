@@ -58,6 +58,9 @@ export const GlobalStyle = createGlobalStyle`
     line-height: 1.7rem;
     margin-bottom: .2rem;
     opacity: .8;
+    :first-of-type {
+      margin-top: .5rem;
+    }
     @media (max-width: 960px) {
       font-size: 1rem;
     }
@@ -132,11 +135,6 @@ export const GlobalStyle = createGlobalStyle`
         :last-of-type {
           flex: 3;
         }
-      }
-
-      > div {
-        margin-top: 1rem;
-
       }
     }
 

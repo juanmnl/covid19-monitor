@@ -10,10 +10,10 @@ TODO
 - Add options to charts
   - Logaritmic vs linear toggle
 - Add interactivity
- - StatBlocks should filter the vis on click.
+- StatBlocks should filter the vis on click.
 - % values on stat blocks
- - Growth %
- - Change %
+- Growth %
+- Change %
 - try to hook API data for ecuador
   - Crawler for wikipedia or World meter as they seems to be the fastest updated site (https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Ecuador || https://www.worldometers.info/coronavirus/#countries)
 - Error states
@@ -39,7 +39,6 @@ REACT_APP_MAPBOX_ACCESS_TOKEN=token
 
 😅
 
-
 **ECUADOR**
 Tenemos un canal en Discord para conversar: https://discord.gg/N3N74QG
 
@@ -49,4 +48,5 @@ Tomen este repo y háganlo suyo. Está claro que nuestros gobiernos no nos van a
 ✊✊🏻✊🏼✊🏽✊🏾✊🏿
 
 🇪🇨https://www.monitorec.app
+
 🇧🇷https://covid19br.app

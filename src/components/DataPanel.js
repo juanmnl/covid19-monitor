@@ -11,11 +11,6 @@ export default function DataPanel() {
       <Heading />
       <Nav />
       <div>
-        <h2>Mundo</h2>
-        <Stats url="https://covid19.mathdro.id/api/" />
-      </div>
-
-      <div>
         <h2>
           Ecuador{' '}
           <span role="img" aria-label="Ecuador Flag">
@@ -24,6 +19,11 @@ export default function DataPanel() {
         </h2>
         <Ecuador />
       </div>
+      <div>
+        <h2>Mundo</h2>
+        <Stats url="https://covid19.mathdro.id/api/" />
+      </div>
+      <hr />
       <Footer />
     </section>
   );
