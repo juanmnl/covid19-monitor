@@ -16,3 +16,17 @@ TODO
 - add information pages
 - add studies
 - fix firefox scrolling behaviour on left section
+
+Para dev
+
+- crear token en mapbox.com
+- agregar a .env.local
+
+```
+REACT_APP_MAPBOX_ACCESS_TOKEN=token
+```
+
+- npm start
+- arreglar todo este 🍝
+
+😅
