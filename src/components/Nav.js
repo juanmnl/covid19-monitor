@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from '@reach/router';
+import { withTranslation } from 'react-i18next';
 
 const isActive = ({ isCurrent }) => {
   return isCurrent ? { className: 'active' } : {};
@@ -44,21 +45,23 @@ const Navigation = styled.nav`
   }
 `;
 
-export default function Nav() {
+const Nav = ({t}) => {
   return (
     <Navigation>
       <Link to="/" getProps={isActive}>
-        Mapa
+        {t("map.label")}
       </Link>
       <Link to="contagios-provincia" getProps={isActive}>
-        X Provincia
+        {t("region.label")}
       </Link>
       <Link to="contagios" getProps={isActive}>
-        X Día
+        {t("day.label")}
       </Link>
       <Link to="detalles" getProps={isActive}>
-        Detalle
+        {t("detail.label")}
       </Link>
     </Navigation>
   );
-}
+};
+
+export default withTranslation()(Nav)

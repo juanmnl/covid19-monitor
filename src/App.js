@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense }  from 'react';
 import { Router } from '@reach/router';
 import MapChart from '../src/components/MapChart';
 import {
@@ -12,18 +12,20 @@ import DataPanel from '../src/components/DataPanel';
 export default function App() {
   return (
     <>
-      <GlobalStyle />
-      <main>
-        <DataPanel />
-        <section>
-          <Router>
-            <MapChart path="/" />
-            <ConfirmedChart path="/contagios" />
-            <ConfirmedByProvinceChart path="/contagios-provincia" />
-            <DetailsChart path="/detalles" />
-          </Router>
-        </section>
-      </main>
+      <Suspense fallback={null}>
+        <GlobalStyle />
+        <main>
+          <DataPanel />
+          <section>
+            <Router>
+              <MapChart path="/" />
+              <ConfirmedChart path="/contagios" />
+              <ConfirmedByProvinceChart path="/contagios-provincia" />
+              <DetailsChart path="/detalles" />
+            </Router>
+          </section>
+        </main>
+      </Suspense>
     </>
   );
 }

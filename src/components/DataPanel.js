@@ -4,27 +4,33 @@ import Ecuador from '../components/Ecuador';
 import Heading from '../components/Heading';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import '../i18n';
+import LanguageSelector from './LanguageSelector';
+import { withTranslation } from 'react-i18next';
 
-export default function DataPanel() {
+const DataPanel = ({t}) => {
   return (
     <section>
       <Heading />
       <Nav />
       <div>
         <h2>
-          Ecuador{' '}
+          {t('ecuador.title')}{' '}
           <span role="img" aria-label="Ecuador Flag">
             🇪🇨
           </span>
         </h2>
+        <LanguageSelector />
         <Ecuador />
       </div>
       <div>
-        <h2>Mundo</h2>
+        <h2>{t('world.title')}</h2>
         <Stats url="https://covid19.mathdro.id/api/" />
       </div>
       <hr />
       <Footer />
     </section>
   );
-}
+};
+
+export default withTranslation()(DataPanel)

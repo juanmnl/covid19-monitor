@@ -1,11 +1,14 @@
 import React from 'react';
+import { withTranslation } from 'react-i18next';
 
-export default function Heading() {
+const Heading = ({t}) => {
   return (
     <h1>
-      Monitor COVID-19/SARS-CoV-2 Ecuador*
+      {t('main.title')}{' '}
       <br />
-      <small>*Esta NO es una fuente oficial</small>
+      <small>{t('main.title.disclaimer')}</small>
     </h1>
   );
-}
+};
+
+export default withTranslation()(Heading)
