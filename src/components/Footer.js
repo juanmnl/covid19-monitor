@@ -7,7 +7,7 @@ export default function Footer() {
     <footer>
       <a href="https://www.twitter.com/_juanmnl">&copy;{year} - juanmnl</a>
       <br />
-      <a href="https://www.github.com/juanmnl/covid19-monitor">Ayuda?</a>
+      <a href="https://www.github.com/juanmnl/covid19-monitor">Me ayudas?</a>
     </footer>
   );
 }

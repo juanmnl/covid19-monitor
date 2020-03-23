@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Map from './MapGL';
 
-export default function SubScreen({zoom, isSmallSize}) {
+export default function SubScreen({ zoom, isSmallSize }) {
   return (
     <Screen>
       <Map lat={-0.52} lng={-90.34} z={zoom - 0.5} isSmallSize={isSmallSize} />

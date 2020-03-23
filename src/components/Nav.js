@@ -7,7 +7,7 @@ const isActive = ({ isCurrent }) => {
 };
 
 const Navigation = styled.nav`
-  background-color: hsla(164, 23%, 10%, 1);
+  background-color: var(--color-black);
   margin: 0.5rem 0;
   padding: 0.2rem 0.3rem;
   border-radius: 2px;

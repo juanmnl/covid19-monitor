@@ -1,13 +1,13 @@
-import React, { useState } from "react";
-import Map from "./MapGL";
-import SubScreen from "./SubScreen";
-import { useWindowSize } from "../hooks/useWindowSize";
+import React from 'react';
+import Map from './MapGL';
+import SubScreen from './SubScreen';
+import { useWindowSize } from '../hooks/useWindowSize';
 
 const SM_SCREEN_SIZE = 768;
 const LG_SCREEN_SIZE = 1200;
-const MONITOR_SM_SIZE = "small";
-const MONITOR_MD_SIZE = "medium";
-const MONITOR_LG_SIZE = "large";
+const MONITOR_SM_SIZE = 'small';
+const MONITOR_MD_SIZE = 'medium';
+const MONITOR_LG_SIZE = 'large';
 
 const zooms = {
   [MONITOR_SM_SIZE]: 5.5,

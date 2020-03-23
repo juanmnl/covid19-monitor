@@ -3,10 +3,13 @@ import { createGlobalStyle } from 'styled-components';
 export const GlobalStyle = createGlobalStyle`
   :root {
     --color-primary: hsla(163, 72%, 48%, 1.0);
-    --color-secondary: hsla(50, 100%, 64%, 1.0);
+    --color-primary-5: hsla(163, 72%, 48%, 0.5);
+    --color-secondary: hsla(167, 22%, 78%, 1.0);
     --color-warning: hsla(25, 100%, 67%, 1.0);
     --color-danger: hsla(0, 100%, 67%, 1.0);
-    --color-background: hsla(164, 23%, 13%, 1.0);
+    --color-background: hsla(229, 19%, 16%, 1.0);
+    --color-black: hsla(223, 13%, 11%, 1.0);
+    --color-yellow: hsla(59, 100%, 67%, 1.0);
   }
 
   * {
@@ -88,7 +91,7 @@ export const GlobalStyle = createGlobalStyle`
     display: flex;
 
     padding: .5rem;
-    border: 4px solid var(--color-primary);
+    border: 4px solid var(--color-black);
 
     @media(max-width: 960px) {
       padding: 0;
@@ -100,10 +103,10 @@ export const GlobalStyle = createGlobalStyle`
       flex-direction: column;
       justify-content: space-between;
       padding: 1rem;
-      border: 2px solid var(--color-primary);
+      border: 1px solid var(--color-primary-5);
       flex: 1;
       margin: .5rem;
-      animation: turn-on .4s linear;
+      animation: turn-on .3s linear;
       animation-fill-mode: forwards;
 
       :first-of-type {
@@ -139,7 +142,9 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     footer {
-      padding-bottom: 2rem;
+      padding-bottom: 1rem;
+      display: flex;
+      justify-content: space-between;
     }
 
     .danger {

@@ -14,8 +14,8 @@ export const StatBlock = styled.article`
   flex: 1;
   flex-direction: column;
   padding: 0.6rem 0.8rem;
-  box-shadow: 0 1px 3px hsla(163, 72%, 0%, 0.5),
-    0 -1px 0 hsla(163, 72%, 48%, 0.7);
+  box-shadow: 0 1px 1px hsla(163, 72%, 0%, 0.7), 0 -1px 0 var(--color-black);
+  border: 1px solid var(--color-black);
   border-radius: 2px;
   transition: box-shadow 150ms ease-in;
   text-align: right;
@@ -37,8 +37,7 @@ export const StatBlock = styled.article`
   }
 
   :hover {
-    color: var(--color-background);
-    background-color: hsla(163, 72%, 48%, 0.9);
+    border-color: var(--color-primary);
     transition: all 300ms ease-in;
   }
 
@@ -49,7 +48,7 @@ export const StatBlock = styled.article`
 `;
 
 export const Separator = styled.div`
-  border-top: 1px dotted var(--color-primary);
+  border-top: 1px dotted var(--color-primary-5);
   height: 1px;
   width: 100%;
   margin: 0 1rem;
@@ -71,7 +70,7 @@ export const Row = styled.li`
   }
   :nth-of-type(3),
   :nth-of-type(4) {
-    color: var(--color-secondary);
+    color: var(--color-yellow);
   }
   @media (max-width: 960px) {
     font-size: 1rem;
