@@ -12,7 +12,7 @@ const MONITOR_LG_SIZE = 'large';
 const zooms = {
   [MONITOR_SM_SIZE]: 5.75,
   [MONITOR_MD_SIZE]: 5.85,
-  [MONITOR_LG_SIZE]: 6.3
+  [MONITOR_LG_SIZE]: 6.5
 };
 
 const getSizeScreen = width => {
