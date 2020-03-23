@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## 🇪🇨
+
+**Lo primero y más importante a hacer: buscar la forma de traducir la app a Kichwa.**
+
 TODO
 
 - Merge responsible (i'm looking at you!)
