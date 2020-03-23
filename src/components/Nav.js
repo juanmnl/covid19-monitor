@@ -16,8 +16,8 @@ const Navigation = styled.nav`
   > a {
     display: inline-block;
     font-weight: bolder;
-    padding: 0.2rem 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.7rem;
     line-height: 1.6rem;
     text-transform: uppercase;
     margin-left: 0.4rem;

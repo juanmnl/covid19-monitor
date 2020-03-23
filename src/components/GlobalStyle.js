@@ -22,8 +22,9 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-kerning: auto;
-    font-size: 18px;
-    font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
+    font-size: 20px;
+    /* font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace; */
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     -webkit-text-size-adjust: 100%;
   }
 
@@ -35,14 +36,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h1 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-shadow: 0 1px 3px hsla(0, 0%, 0%, 0.7), 0 -1px 0 hsla(0, 0%, 100%, 0.5);
     color: var(--color-secondary);
     font-weight: 900;
     text-transform: uppercase;
 
     > small {
-      font-size: .7rem;
+      font-size: .6rem;
       font-weight: 400;
       letter-spacing: normal;
       text-shadow: none;
@@ -55,7 +56,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: var(--color-primary);
     border-radius: 1px;
     line-height: 1.7rem;
@@ -71,6 +72,11 @@ export const GlobalStyle = createGlobalStyle`
 
   a {
     color: var(--color-primary);
+  }
+
+  div > p, a {
+    color: var(--color-primary-5);
+    font-size: .9rem;
   }
 
   hr {

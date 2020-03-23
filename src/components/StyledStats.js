@@ -86,6 +86,7 @@ export const Row = styled.li`
 `;
 
 export const TwoCols = styled.ol`
+  font-size: 1.4rem;
   padding-left: 0;
   columns: 2;
   margin-bottom: 1.4rem;
