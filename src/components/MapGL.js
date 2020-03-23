@@ -33,8 +33,8 @@ export default function Map({ lat, lng, z, isSmallSize }) {
     zoom: z
   });
 
-  const alertedSize = isSmallSize ? 40 : 100;
-  const notAlertedSize = isSmallSize ? 20 : 40;
+  const alertedSize = isSmallSize ? 70 : 100;
+  const notAlertedSize = isSmallSize ? 30 : 40;
 
   return (
     <ReactMapGL
@@ -77,7 +77,7 @@ export default function Map({ lat, lng, z, isSmallSize }) {
                 x={point.status === 'alert' ? '50' : '20'}
                 y={point.status === 'alert' ? '55' : '25'}
                 fontFamily="sans-serif"
-                fontSize={point.status === 'alert' ? '18px' : '16px'}
+                fontSize={point.status === 'alert' ? '20px' : '18px'}
                 fill="black"
                 textAnchor="middle"
               >
