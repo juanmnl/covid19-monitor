@@ -10,8 +10,8 @@ const MONITOR_MD_SIZE = 'medium';
 const MONITOR_LG_SIZE = 'large';
 
 const zooms = {
-  [MONITOR_SM_SIZE]: 5.68,
-  [MONITOR_MD_SIZE]: 5.85,
+  [MONITOR_SM_SIZE]: 5.6,
+  [MONITOR_MD_SIZE]: 5.8,
   [MONITOR_LG_SIZE]: 6.5
 };
 
