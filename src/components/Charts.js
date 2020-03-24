@@ -25,14 +25,45 @@ const ChartPieSection = styled.div`
   }
 `;
 
+// Usar esto para casos diarios (barras) y crear curva log() en nueva sección "La curva"
+
 const datesArray = getDates(new Date('02/28/2020'), new Date());
+
+const dailyConfirmed = [
+  0,
+  1,
+  5,
+  1,
+  0,
+  3,
+  3,
+  1,
+  0,
+  1,
+  0,
+  2,
+  0,
+  2,
+  1,
+  8,
+  9,
+  21,
+  53,
+  57,
+  92,
+  216,
+  106,
+  257,
+  192,
+  68
+];
 
 const confirmed = {
   labels: datesArray.map(date => date.displayFormat),
   datasets: [
     {
-      label: 'Confirmados',
-      type: 'line',
+      label: 'Confirmados Diarios',
+      // type: 'line',
       pointBorderColor: 'hsla(163, 72%, 48%, 1.0)',
       pointBackgroundColor: 'hsla(163, 72%, 48%, 0.7)',
       backgroundColor: 'hsla(163, 72%, 48%, .4)',
@@ -44,33 +75,7 @@ const confirmed = {
       pointStyle: 'mitter',
       showLines: false,
       lineTension: 0.3,
-      data: [
-        0,
-        1,
-        5,
-        1,
-        0,
-        3,
-        3,
-        1,
-        0,
-        1,
-        0,
-        2,
-        0,
-        2,
-        1,
-        8,
-        9,
-        21,
-        53,
-        57,
-        92,
-        216,
-        106,
-        257,
-        192
-      ]
+      data: dailyConfirmed
     }
   ]
 };
@@ -114,7 +119,7 @@ const confirmedByProvince = {
   labels: labels,
   datasets: [
     {
-      label: 'Confirmados',
+      label: 'Confirmados x Provincia',
       backgroundColor: 'hsla(163, 72%, 48%, .4)',
       borderColor: 'hsla(163, 72%, 48%, 1.0)',
       borderWidth: 1,
@@ -161,7 +166,7 @@ const data = {
   ],
   datasets: [
     {
-      data: [3, 824, 95, 41, 18],
+      data: [3, 886, 78, 55, 27],
       borderColor: 'hsla(164, 23%, 3%, 0.6)',
       backgroundColor: [
         'hsla(163, 72%, 100%, 0.9)',
