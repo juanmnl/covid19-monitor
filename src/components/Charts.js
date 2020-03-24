@@ -32,7 +32,7 @@ const confirmed = {
   datasets: [
     {
       label: 'Confirmados',
-      type: 'line',
+      // type: 'line',
       pointBorderColor: 'hsla(163, 72%, 48%, 1.0)',
       pointBackgroundColor: 'hsla(163, 72%, 48%, 0.7)',
       backgroundColor: 'hsla(163, 72%, 48%, .4)',
@@ -69,7 +69,8 @@ const confirmed = {
         216,
         106,
         257,
-        192
+        192,
+        68
       ]
     }
   ]
@@ -161,7 +162,7 @@ const data = {
   ],
   datasets: [
     {
-      data: [3, 824, 95, 41, 18],
+      data: [3, 886, 78, 55, 27],
       borderColor: 'hsla(164, 23%, 3%, 0.6)',
       backgroundColor: [
         'hsla(163, 72%, 100%, 0.9)',
