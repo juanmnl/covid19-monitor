@@ -30,7 +30,7 @@ export default function Ecuador() {
     <>
       <p>
         <small>
-          Última actualización: 22.03 | 11:00am | Fuente:{' '}
+          Última actualización: 24.03 | 10:00am | Fuente:{' '}
           <a href="https://twitter.com/Riesgos_Ec">RIESGOS EC</a>
         </small>
       </p>
