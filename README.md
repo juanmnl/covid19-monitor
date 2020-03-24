@@ -53,3 +53,5 @@ Tomen este repo y háganlo suyo. Está claro que nuestros gobiernos no nos van a
 🇪🇨https://www.monitorec.app
 
 🇧🇷https://covid19br.app
+
+🇲🇽(Sonora) https://covid19-monitor-sonora.netlify.com/
