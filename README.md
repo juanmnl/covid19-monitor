@@ -23,8 +23,6 @@ TODO
 - Error states
 - refactor styled components/global styles
 - add index metas
-- migrate gatsby?, next?
-- add db (light table or google sheets)
 - add information pages
 - add studies
 - fix firefox scrolling behaviour on left section
