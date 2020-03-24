@@ -8,6 +8,7 @@ TODO
 
 - Merge responsible (i'm looking at you!)
 - Create tickets from all of these.
+- Migrate mapbox and chart.js to D3 for extensible graphs
 - Easier data input
 - Fix Markers (scatter plot?)
 - Fix responsive map window
