@@ -5,10 +5,9 @@ import Heading from '../components/Heading';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
 import '../i18n';
-import LanguageSelector from './LanguageSelector';
 import { withTranslation } from 'react-i18next';
 
-const DataPanel = ({t}) => {
+const DataPanel = ({ t }) => {
   return (
     <section>
       <Heading />
@@ -20,7 +19,6 @@ const DataPanel = ({t}) => {
             🇪🇨
           </span>
         </h2>
-        <LanguageSelector />
         <Ecuador />
       </div>
       <div>
@@ -33,4 +31,4 @@ const DataPanel = ({t}) => {
   );
 };
 
-export default withTranslation()(DataPanel)
+export default withTranslation()(DataPanel);

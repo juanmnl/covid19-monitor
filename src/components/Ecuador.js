@@ -7,9 +7,9 @@ import {
   Row,
   Separator
 } from '../components/StyledStats';
-import { withTranslation } from 'react-i18next'
+import { withTranslation } from 'react-i18next';
 
-const Ecuador = ({t}) => {
+const Ecuador = ({ t }) => {
   const provinces = data;
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
@@ -50,10 +50,6 @@ const Ecuador = ({t}) => {
           <h3>{t('deaths.label')}</h3>
         </StatBlock>
         <StatBlock>
-          <p>{dataTotals.surveillance}</p>
-          <h3>{t('surveillance.label')}</h3>
-        </StatBlock>
-        <StatBlock>
           <p>{dataTotals.suspicious}</p>
           <h3>{t('suspicious.label')}</h3>
         </StatBlock>
@@ -90,4 +86,4 @@ const Ecuador = ({t}) => {
   );
 };
 
-export default withTranslation()(Ecuador)
+export default withTranslation()(Ecuador);
