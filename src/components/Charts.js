@@ -60,7 +60,8 @@ const dailyConfirmed = [
   106,
   257,
   192,
-  101
+  101,
+  91
 ];
 
 const confirmed = {
@@ -171,7 +172,7 @@ const data = {
   ],
   datasets: [
     {
-      data: [3, 919, 78, 55, 27],
+      data: [3, 990, 87, 65, 28],
       borderColor: 'hsla(164, 23%, 3%, 0.6)',
       backgroundColor: [
         'hsla(163, 72%, 100%, 0.9)',

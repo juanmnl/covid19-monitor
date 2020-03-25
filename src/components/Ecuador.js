@@ -15,13 +15,12 @@ export default function Ecuador() {
   });
 
   const dataTotals = {
-    confirmed: 1082,
-    deaths: 27,
-    surveillance: 1347,
-    suspicious: 1311,
-    negatives: 1225,
+    confirmed: 1173,
+    deaths: 28,
+    suspicious: 1562,
+    negatives: 1346,
     recoveries: 3,
-    tests: 3618
+    tests: 4081
   };
 
   var result = (dataTotals.confirmed / dataTotals.tests) * 100;
@@ -48,10 +47,6 @@ export default function Ecuador() {
         <StatBlock className="danger">
           <p>{dataTotals.deaths}</p>
           <h3>Decesos</h3>
-        </StatBlock>
-        <StatBlock>
-          <p>{dataTotals.surveillance}</p>
-          <h3>Cerco</h3>
         </StatBlock>
         <StatBlock>
           <p>{dataTotals.suspicious}</p>
