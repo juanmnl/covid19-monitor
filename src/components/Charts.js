@@ -163,8 +163,6 @@ export function ConfirmedByProvinceChart() {
   );
 }
 
-
-
 export function DetailsChart() {
   const { t } = useTranslation();
   const data = {
@@ -177,7 +175,7 @@ export function DetailsChart() {
     ],
     datasets: [
       {
-        data: [3, 990, 87, 65, 28],
+        data: [3, 1028, 87, 64, 29],
         borderColor: 'hsla(164, 23%, 3%, 0.6)',
         backgroundColor: [
           'hsla(163, 72%, 100%, 0.9)',
