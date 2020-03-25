@@ -7,8 +7,9 @@ import {
   Row,
   Separator
 } from '../components/StyledStats';
+import { withTranslation } from 'react-i18next'
 
-export default function Ecuador() {
+const Ecuador = ({t}) => {
   const provinces = data;
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
@@ -29,7 +30,7 @@ export default function Ecuador() {
     <>
       <p>
         <small>
-          Última actualización: 24.03 | 17:30 | Fuente:{' '}
+          {t('updateDate.label')} 24.03 | 17:30 | {t('source.label')}{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -42,35 +43,39 @@ export default function Ecuador() {
       <StatGrid>
         <StatBlock className="warning">
           <p>{dataTotals.confirmed}</p>
-          <h3>Confirmados</h3>
+          <h3>{t('confirmed.label')}</h3>
         </StatBlock>
         <StatBlock className="danger">
           <p>{dataTotals.deaths}</p>
-          <h3>Decesos</h3>
+          <h3>{t('deaths.label')}</h3>
+        </StatBlock>
+        <StatBlock>
+          <p>{dataTotals.surveillance}</p>
+          <h3>{t('surveillance.label')}</h3>
         </StatBlock>
         <StatBlock>
           <p>{dataTotals.suspicious}</p>
-          <h3>Sospecha</h3>
+          <h3>{t('suspicious.label')}</h3>
         </StatBlock>
         <StatBlock>
           <p>{dataTotals.negatives}</p>
-          <h3>Descartados</h3>
+          <h3>{t('negatives.label')}</h3>
         </StatBlock>
         <StatBlock>
           <p>{dataTotals.recoveries}</p>
-          <h3>Recuperados</h3>
+          <h3>{t('recoveries.label')}</h3>
         </StatBlock>
         <StatBlock>
           <p>{dataTotals.tests}</p>
-          <h3>Pruebas</h3>
+          <h3>{t('test.label')}</h3>
         </StatBlock>
         <StatBlock>
           <p>{result.toFixed(2)}% </p>
-          <h3>Positivos : Pruebas</h3>
+          <h3>{t('rate.label')}</h3>
         </StatBlock>
       </StatGrid>
       <br />
-      <h4>Provincias / Confirmados</h4>
+      <h4>{t('confirmedPerRegion.label')}</h4>
       <br />
       <TwoCols>
         {sortedProvinces.map(province => (
@@ -83,4 +88,6 @@ export default function Ecuador() {
       </TwoCols>
     </>
   );
-}
+};
+
+export default withTranslation()(Ecuador)

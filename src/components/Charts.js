@@ -2,6 +2,7 @@ import React from 'react';
 import { Bar, HorizontalBar, Doughnut } from 'react-chartjs-2';
 import styled from 'styled-components';
 import { getDates } from '../utils/dateUtils';
+import { useTranslation } from 'react-i18next';
 import provinceData from '../db/EcuadorData';
 
 const provinces = provinceData;
@@ -162,37 +163,40 @@ export function ConfirmedByProvinceChart() {
   );
 }
 
-const data = {
-  labels: [
-    'Recuperados',
-    'Estables/Domicilio',
-    'Estables/Hospital',
-    'Pronóstico Reservado/Hospital',
-    'Fallecidos'
-  ],
-  datasets: [
-    {
-      data: [3, 990, 87, 65, 28],
-      borderColor: 'hsla(164, 23%, 3%, 0.6)',
-      backgroundColor: [
-        'hsla(163, 72%, 100%, 0.9)',
-        'hsla(163, 72%, 48%, 0.7)',
-        'hsla(50, 100%, 64%, 0.7)',
-        'hsla(25, 100%, 67%, 0.7)',
-        'hsla(0, 100%, 67%, 0.7)'
-      ],
-      hoverBackgroundColor: [
-        'hsla(163, 72%, 100%, 1.0)',
-        'hsla(163, 72%, 48%, 1.0)',
-        'hsla(50, 100%, 64%, 1.0)',
-        'hsla(25, 100%, 67%, 1.0)',
-        'hsla(0, 100%, 67%, 1.0)'
-      ]
-    }
-  ]
-};
+
 
 export function DetailsChart() {
+  const { t } = useTranslation();
+  const data = {
+    labels: [
+      t('recoveries.label'),
+      t('homeStable.label'),
+      t('hospitalStable.label'),
+      t('reserveState.label'),
+      t('deaths.label')
+    ],
+    datasets: [
+      {
+        data: [3, 990, 87, 65, 28],
+        borderColor: 'hsla(164, 23%, 3%, 0.6)',
+        backgroundColor: [
+          'hsla(163, 72%, 100%, 0.9)',
+          'hsla(163, 72%, 48%, 0.7)',
+          'hsla(50, 100%, 64%, 0.7)',
+          'hsla(25, 100%, 67%, 0.7)',
+          'hsla(0, 100%, 67%, 0.7)'
+        ],
+        hoverBackgroundColor: [
+          'hsla(163, 72%, 100%, 1.0)',
+          'hsla(163, 72%, 48%, 1.0)',
+          'hsla(50, 100%, 64%, 1.0)',
+          'hsla(25, 100%, 67%, 1.0)',
+          'hsla(0, 100%, 67%, 1.0)'
+        ]
+      }
+    ]
+  };
+
   return (
     <ChartPieSection>
       <Doughnut
