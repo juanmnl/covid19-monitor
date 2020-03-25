@@ -51,13 +51,13 @@ export default function Nav() {
         Mapa
       </Link>
       <Link to="contagios-provincia" getProps={isActive}>
-        X Provincia
+        Provincias
       </Link>
       <Link to="contagios" getProps={isActive}>
-        X Día
+        Diario
       </Link>
       <Link to="detalles" getProps={isActive}>
-        Detalle
+        Detalles
       </Link>
     </Navigation>
   );

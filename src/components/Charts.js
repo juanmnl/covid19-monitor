@@ -2,7 +2,12 @@ import React from 'react';
 import { Bar, HorizontalBar, Doughnut } from 'react-chartjs-2';
 import styled from 'styled-components';
 import { getDates } from '../utils/dateUtils';
-import EcuadorData from '../db/EcuadorData';
+import provinceData from '../db/EcuadorData';
+
+const provinces = provinceData;
+const sortedProvinces = provinces.sort((a, b) => {
+  return a.id - b.id;
+});
 
 const ChartSection = styled.div`
   width: 100%;
@@ -113,8 +118,8 @@ export function ConfirmedChart() {
   );
 }
 
-const labels = EcuadorData.map(province => province.name);
-const confirmedCases = EcuadorData.map(province => province.confirmed);
+const labels = sortedProvinces.map(province => province.name);
+const confirmedCases = sortedProvinces.map(province => province.confirmed);
 const confirmedByProvince = {
   labels: labels,
   datasets: [
