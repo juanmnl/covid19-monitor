@@ -19,7 +19,9 @@ Para dev
 REACT_APP_MAPBOX_ACCESS_TOKEN=token
 ```
 
-- npm start
+- `npm i && npm start`
+
+> Dudas para ejecutar la applicación? [Aquí una guía 🤓](./docs/run-instructions.md)
 
 😅
 
