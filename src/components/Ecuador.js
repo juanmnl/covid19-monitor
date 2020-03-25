@@ -16,13 +16,12 @@ const Ecuador = ({t}) => {
   });
 
   const dataTotals = {
-    confirmed: 981,
-    deaths: 18,
-    surveillance: 1347,
-    suspicious: 708,
-    negatives: 1091,
+    confirmed: 1173,
+    deaths: 28,
+    suspicious: 1562,
+    negatives: 1346,
     recoveries: 3,
-    tests: 2780
+    tests: 4081
   };
 
   var result = (dataTotals.confirmed / dataTotals.tests) * 100;
@@ -31,8 +30,14 @@ const Ecuador = ({t}) => {
     <>
       <p>
         <small>
-          {t('updateDate.label')} 22.03 | 11:00am | {t('source.label')}{' '}
-          <a href="https://twitter.com/Riesgos_Ec">RIESGOS EC</a>
+          {t('updateDate.label')} 24.03 | 17:30 | {t('source.label')}{' '}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://twitter.com/Riesgos_Ec"
+          >
+            RIESGOS EC
+          </a>
         </small>
       </p>
       <StatGrid>

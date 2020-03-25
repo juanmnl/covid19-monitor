@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Monitor EC | Covid-19",
+  "name": "Un prototipo para la visualización de datos, sobre la proliferación del COVID-19 en el Ecuador.",
   "icons": [
     {
       "src": "favicon.ico",

@@ -34,9 +34,8 @@ export default function MapChart() {
 
   return (
     <>
-      {!isSmallSize && (
-        <SubScreen zoom={zooms[size]} isSmallSize={isSmallSize} />
-      )}
+      <SubScreen zoom={zooms[size]} isSmallSize={isSmallSize} />
+
       <Map lat={-1.78} lng={-78.5} z={zooms[size]} isSmallSize={isSmallSize} />
     </>
   );
