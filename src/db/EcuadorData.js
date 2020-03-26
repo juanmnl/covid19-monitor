@@ -120,7 +120,7 @@ const data = [
     id: 9,
     name: 'Guayas',
     capital: 'Guayaquil',
-    confirmed: 1000,
+    confirmed: 1021,
     deaths: 0,
     compromised: 0,
     status: 'alert',
