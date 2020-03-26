@@ -30,7 +30,7 @@ const Ecuador = ({ t }) => {
     <>
       <p>
         <small>
-          {t('updateDate.label')} 24.03 | 17:30 | {t('source.label')}{' '}
+          {t('updateDate.label')} 25.03 | 18:30 | {t('source.label')}{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
