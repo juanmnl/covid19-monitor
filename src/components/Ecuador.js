@@ -16,12 +16,12 @@ const Ecuador = ({ t }) => {
   });
 
   const dataTotals = {
-    confirmed: 1211,
-    deaths: 29,
-    suspicious: 1692,
-    negatives: 1387,
+    confirmed: 1382,
+    deaths: 34,
+    suspicious: 1778,
+    negatives: 1676,
     recoveries: 3,
-    tests: 4290
+    tests: 4836
   };
 
   var result = (dataTotals.confirmed / dataTotals.tests) * 100;
@@ -41,11 +41,11 @@ const Ecuador = ({ t }) => {
         </small>
       </p>
       <StatGrid>
-        <StatBlock className="warning">
+        <StatBlock>
           <p>{dataTotals.confirmed}</p>
           <h3>{t('confirmed.label')}</h3>
         </StatBlock>
-        <StatBlock className="danger">
+        <StatBlock>
           <p>{dataTotals.deaths}</p>
           <h3>{t('deaths.label')}</h3>
         </StatBlock>

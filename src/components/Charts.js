@@ -62,7 +62,8 @@ const dailyConfirmed = [
   257,
   192,
   101,
-  91
+  91,
+  171
 ];
 
 const confirmed = {
@@ -175,7 +176,7 @@ export function DetailsChart() {
     ],
     datasets: [
       {
-        data: [3, 1028, 87, 64, 29],
+        data: [3, 1213, 74, 58, 34],
         borderColor: 'hsla(164, 23%, 3%, 0.6)',
         backgroundColor: [
           'hsla(163, 72%, 100%, 0.9)',

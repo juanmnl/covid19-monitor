@@ -12,6 +12,7 @@ export const StatGrid = styled.section`
 export const StatBlock = styled.article`
   display: flex;
   flex: 1;
+  color: var(--color-primary);
   flex-direction: column;
   padding: 0.6rem 0.8rem;
   box-shadow: 0 1px 1px hsla(163, 72%, 0%, 0.7), 0 -1px 0 var(--color-black);
@@ -21,6 +22,22 @@ export const StatBlock = styled.article`
   text-align: right;
   transition: all 200ms ease-out;
   margin: 0.3rem;
+
+  :nth-of-type(1) {
+    color: var(--color-warning);
+  }
+
+  :nth-of-type(2) {
+    color: var(--color-danger);
+  }
+
+  :nth-of-type(6) {
+    color: var(--color-secondary);
+  }
+
+  :nth-of-type(7) {
+    color: var(--color-secondary);
+  }
 
   > h3 {
     font-size: 0.6rem;
@@ -39,6 +56,14 @@ export const StatBlock = styled.article`
   :hover {
     border-color: var(--color-primary);
     transition: all 300ms ease-in;
+
+    :nth-of-type(1) {
+      border-color: var(--color-warning);
+    }
+
+    :nth-of-type(2) {
+      border-color: var(--color-danger);
+    }
   }
 
   @media (max-width: 960px) {
