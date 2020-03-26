@@ -10,23 +10,28 @@ Quieres ayudar?
 
 - También puedes buscar dónde ayudar acá: [Listado de iniciativas COVID19 - Ecuador](https://github.com/juanmnl/Ecuador-Covid19)
 
-Para dev
+### Cómo construir la aplicación
 
-- crear token en mapbox.com
-- agregar a `/.env.local`
+Para desarrolladoras/es:
+
+- Crear token en [mapbox](https://www.mapbox.com/)
+- Agregarlo a `/.env.local`:
 
 ```
-REACT_APP_MAPBOX_ACCESS_TOKEN=token
+  REACT_APP_MAPBOX_ACCESS_TOKEN=token
 ```
 
-- `npm i && npm start`
+- Ejecutar: `npm i && npm start`
 
 > Dudas para ejecutar la applicación? [Aquí una guía 🤓](./docs/run-instructions.md)
 
 😅
 
-**Otros Países**
-Tomen este repo y háganlo suyo. Está claro que nuestros gobiernos no nos van a facilitar la visualización y rastreo del impácto del virus, por lo que les pido lo tomen en sus manos.
+## **Otros Países**
+
+Tomen este repo y háganlo suyo. Está claro que nuestros gobiernos no nos van a
+facilitar la visualización y rastreo del impácto del virus, por lo que les pido
+lo tomen en sus manos.
 
 ✊✊🏻✊🏼✊🏽✊🏾✊🏿
 
