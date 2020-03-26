@@ -6,7 +6,7 @@ const data = [
     confirmed: 37,
     deaths: 0,
     compromised: 0,
-    status: null,
+    status: 'caution',
     coord: {
       lat: -2.75,
       lng: -79.26
@@ -162,10 +162,10 @@ const data = [
     confirmed: 52,
     deaths: 0,
     compromised: 0,
-    status: null,
+    status: 'caution',
     coord: {
-      lat: -1.45,
-      lng: -79.7
+      lat: -1.38,
+      lng: -79.83
     }
   },
   {
@@ -175,7 +175,7 @@ const data = [
     confirmed: 38,
     deaths: 0,
     compromised: 0,
-    status: null,
+    status: 'caution',
     coord: {
       lat: -0.8,
       lng: -80.4
@@ -240,10 +240,10 @@ const data = [
     confirmed: 121,
     deaths: 0,
     compromised: 0,
-    status: null,
+    status: 'warning',
     coord: {
       lat: -0.0,
-      lng: -78.659
+      lng: -78.759
     }
   },
   {
