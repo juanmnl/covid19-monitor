@@ -16,7 +16,7 @@ const Ecuador = ({ t }) => {
   });
 
   const dataTotals = {
-    confirmed: 1402,
+    confirmed: 1403,
     deaths: 34,
     suspicious: 1965,
     negatives: 1722,
