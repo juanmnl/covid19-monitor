@@ -22,6 +22,6 @@
   "hospitalStable.label": "Estables/Hospital",
   "reserveState.label": "Pronóstico Reservado/Hospital",
   "loading.label": "Cargando...",
-  "error.label": "Algo salio mal",
+  "error.label": "Ha ocurrido un error.",
   "github.link": "Me ayudas?"
 }
