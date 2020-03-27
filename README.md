@@ -41,4 +41,4 @@ lo tomen en sus manos.
 
 🇧🇷https://covid19br.app
 
-🇲🇽(Sonora) https://covid19-monitor-sonora.netlify.com/
+🇲🇽(Sonora) https://monitorsonora.com/
