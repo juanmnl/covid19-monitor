@@ -28,10 +28,9 @@ const ChartPieSection = styled.div`
 
 // Usar esto para casos diarios (barras) y crear curva log() en nueva sección "La curva"
 
-const datesArray = getDates(new Date('02/28/2020'), new Date());
+const datesArray = getDates(new Date('02/29/2020'), new Date());
 
 const dailyConfirmed = [
-  0,
   1,
   5,
   1,
@@ -45,7 +44,7 @@ const dailyConfirmed = [
   2,
   0,
   2,
-  1,
+  4,
   8,
   9,
   21,
@@ -59,14 +58,13 @@ const dailyConfirmed = [
   101,
   91,
   171,
-  192
+  224
 ];
 
-// const sum = dailyConfirmed.reduce((a, b) => a + b);
-// console.log(sum);
+const sum = dailyConfirmed.reduce((a, b) => a + b);
+console.log(sum);
 
 let dailyTotal = [
-  0,
   1,
   6,
   7,
@@ -80,7 +78,7 @@ let dailyTotal = [
   17,
   17,
   19,
-  20,
+  23,
   28,
   37,
   58,
@@ -94,7 +92,7 @@ let dailyTotal = [
   1132,
   1223,
   1394,
-  1586
+  1618
 ];
 
 const confirmed = {
@@ -223,7 +221,7 @@ export function DetailsChart() {
     ],
     datasets: [
       {
-        data: [3, 1404, 71, 81, 36],
+        data: [3, 1376, 113, 94, 41],
         borderColor: 'hsla(164, 23%, 3%, 0.6)',
         backgroundColor: [
           'hsla(163, 72%, 100%, 0.9)',
