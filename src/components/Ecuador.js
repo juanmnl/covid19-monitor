@@ -16,12 +16,12 @@ const Ecuador = ({ t }) => {
   });
 
   const dataTotals = {
-    confirmed: 1403,
-    deaths: 34,
-    suspicious: 1965,
-    negatives: 1722,
+    confirmed: 1595,
+    deaths: 36,
+    suspicious: 2148,
+    negatives: 1889,
     recoveries: 3,
-    tests: 5090
+    tests: 5632
   };
 
   var result = (dataTotals.confirmed / dataTotals.tests) * 100;
