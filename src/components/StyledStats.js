@@ -1,17 +1,5 @@
 import styled from 'styled-components';
 
-export const ErrorMessage = styled.span`
-  font-size: small;
-  padding: 0px 10px;
-  color: var(--color-danger);
-`;
-
-export const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  margin: 20px 0;
-`;
-
 export const StatGrid = styled.section`
   display: flex;
   flex-wrap: wrap;
