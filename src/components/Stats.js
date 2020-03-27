@@ -7,8 +7,8 @@ export default function Stats({ url }) {
   const { t } = useTranslation();
   const nf = Intl.NumberFormat();
   const { data, isLoading, error } = useFetch({ url });
-  if (isLoading) return <p>{t('loading.label')}Loading...</p>;
-  if (error) return <p>{t('error.label')}Something went wrong</p>;
+  if (isLoading) return <p>{t('loading.label')}</p>;
+  if (error) return <p>{t('error.label')}</p>;
   return (
     <>
       <p>
