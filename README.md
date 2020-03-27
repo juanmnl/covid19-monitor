@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/72fecee9-ff8c-483e-b069-bec5caba2678/deploy-status)](https://app.netlify.com/sites/covid19-ec/deploys)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## 🇪🇨**ECUADOR**
