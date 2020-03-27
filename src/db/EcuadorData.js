@@ -143,10 +143,10 @@ const data = [
     }
   },
   {
-    id: 12,
+    id: 11,
     name: 'Loja',
     capital: 'Loja',
-    confirmed: 9,
+    confirmed: 12,
     deaths: 0,
     compromised: 0,
     status: null,
