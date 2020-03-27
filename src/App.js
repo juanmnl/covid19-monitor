@@ -1,6 +1,7 @@
-import React, { Suspense }  from 'react';
+import React, { Suspense } from 'react';
 import { Router } from '@reach/router';
 import MapChart from '../src/components/MapChart';
+import { StatsProvider } from './hooks/statsContext';
 import {
   ConfirmedChart,
   ConfirmedByProvinceChart,
@@ -15,15 +16,17 @@ export default function App() {
       <Suspense fallback={null}>
         <GlobalStyle />
         <main>
-          <DataPanel />
-          <section>
-            <Router>
-              <MapChart path="/" />
-              <ConfirmedChart path="/contagios" />
-              <ConfirmedByProvinceChart path="/contagios-provincia" />
-              <DetailsChart path="/detalles" />
-            </Router>
-          </section>
+          <StatsProvider>
+            <DataPanel />
+            <section>
+              <Router>
+                <MapChart path="/" />
+                <ConfirmedChart path="/contagios" />
+                <ConfirmedByProvinceChart path="/contagios-provincia" />
+                <DetailsChart path="/detalles" />
+              </Router>
+            </section>
+          </StatsProvider>
         </main>
       </Suspense>
     </>

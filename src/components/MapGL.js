@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
-import data from '../db/EcuadorData';
+import { useStats } from '../hooks/statsContext';
 
 // Set your mapbox access token here
 const MAPBOX_ACCESS_TOKEN = process.env.REACT_APP_MAPBOX_ACCESS_TOKEN;
 
-const provinces = data;
-const sortedProvinces = provinces.sort((a, b) => {
-  return b.confirmed - a.confirmed;
-});
-
-let confirmedProvinces = [];
-
-sortedProvinces.forEach(province => {
-  if (province.confirmed > 0) {
-    confirmedProvinces.push(province);
-  }
-});
-
 export default function Map({ lat, lng, z, isSmallSize }) {
+  const { provinces } = useStats();
+  const sortedProvinces = provinces.sort((a, b) => {
+    return b.confirmed - a.confirmed;
+  });
+
+  let confirmedProvinces = [];
+
+  sortedProvinces.forEach(province => {
+    if (province.confirmed > 0) {
+      confirmedProvinces.push(province);
+    }
+  });
+
   useEffect(() => {
     setViewport({
       latitude: lat,
@@ -46,11 +46,7 @@ export default function Map({ lat, lng, z, isSmallSize }) {
     >
       {confirmedProvinces.map(point => {
         return (
-          <Marker
-            key={point.name}
-            latitude={point.coord.lat}
-            longitude={point.coord.lng}
-          >
+          <Marker key={point.name} latitude={point.lat} longitude={point.lng}>
             {point.status === 'alert' && (
               <svg
                 className="on"
@@ -135,7 +131,7 @@ export default function Map({ lat, lng, z, isSmallSize }) {
                 </text>
               </svg>
             )}
-            {point.status === null && (
+            {!point.status && (
               <svg
                 className="on"
                 width="40"
