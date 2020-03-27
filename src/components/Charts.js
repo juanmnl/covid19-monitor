@@ -67,12 +67,46 @@ const dailyConfirmed = [
   192
 ];
 
+// const sum = dailyConfirmed.reduce((a, b) => a + b);
+// console.log(sum);
+
+let dailyTotal = [
+  0,
+  1,
+  6,
+  7,
+  7,
+  10,
+  13,
+  14,
+  14,
+  15,
+  15,
+  17,
+  17,
+  19,
+  20,
+  28,
+  37,
+  58,
+  111,
+  168,
+  260,
+  476,
+  582,
+  839,
+  1031,
+  1132,
+  1223,
+  1394,
+  1586
+];
+
 const confirmed = {
   labels: datesArray.map(date => date.displayFormat),
   datasets: [
     {
-      label: 'Confirmados Diarios',
-      // type: 'line',
+      label: 'Confirmados Día',
       pointBorderColor: 'hsla(163, 72%, 48%, 1.0)',
       pointBackgroundColor: 'hsla(163, 72%, 48%, 0.7)',
       backgroundColor: 'hsla(163, 72%, 48%, .4)',
@@ -83,8 +117,16 @@ const confirmed = {
       pointRadius: 6,
       pointStyle: 'mitter',
       showLines: false,
-      lineTension: 0.3,
       data: dailyConfirmed
+    },
+    {
+      label: 'Confirmados Total',
+      data: dailyTotal,
+      pointBorderColor: 'hsla(25, 100%, 67%, 1.0)',
+      borderColor: 'hsla(25, 100%, 67%, 1.0)',
+      borderWidth: 1,
+      lineTension: 0,
+      type: 'line'
     }
   ]
 };
@@ -111,7 +153,13 @@ export function ConfirmedChart() {
             scales: {
               yAxes: [
                 {
-                  // type: 'logarithmic'
+                  type: 'logarithmic',
+                  stacked: true,
+                  ticks: {
+                    callback: function(value, index, values) {
+                      return value;
+                    }
+                  }
                 }
               ]
             }
