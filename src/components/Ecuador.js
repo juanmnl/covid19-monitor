@@ -1,19 +1,16 @@
 import React from 'react';
-import { withTranslation } from 'react-i18next';
-import { useStats } from '../hooks/statsContext';
+import data from '../db/EcuadorData';
 import {
-  ErrorMessage,
-  HeaderContainer,
   StatGrid,
   StatBlock,
   TwoCols,
   Row,
   Separator
 } from '../components/StyledStats';
-import Spinner from './Spinner';
+import { withTranslation } from 'react-i18next';
 
 const Ecuador = ({ t }) => {
-  const { provinces, isLoading, error } = useStats();
+  const provinces = data;
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
   });
@@ -73,11 +70,9 @@ const Ecuador = ({ t }) => {
           <h3>{t('rate.label')}</h3>
         </StatBlock>
       </StatGrid>
-      <HeaderContainer>
-        <h4>{t('confirmedPerRegion.label')}</h4>
-        {isLoading && <Spinner />}
-        {error && <ErrorMessage>{t('error.label')}</ErrorMessage>}
-      </HeaderContainer>
+      <br />
+      <h4>{t('confirmedPerRegion.label')}</h4>
+      <br />
       <TwoCols>
         {sortedProvinces.map(province => (
           <Row key={province.id}>

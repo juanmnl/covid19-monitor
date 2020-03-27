@@ -3,7 +3,12 @@ import { Bar, HorizontalBar, Doughnut } from 'react-chartjs-2';
 import styled from 'styled-components';
 import { getDates } from '../utils/dateUtils';
 import { useTranslation } from 'react-i18next';
-import { useStats } from '../hooks/statsContext';
+import provinceData from '../db/EcuadorData';
+
+const provinces = provinceData;
+const sortedProvinces = provinces.sort((a, b) => {
+  return a.id - b.id;
+});
 
 const ChartSection = styled.div`
   width: 100%;
@@ -116,27 +121,24 @@ export function ConfirmedChart() {
   );
 }
 
+const labels = sortedProvinces.map(province => province.name);
+const confirmedCases = sortedProvinces.map(province => province.confirmed);
+const confirmedByProvince = {
+  labels: labels,
+  datasets: [
+    {
+      label: 'Confirmados x Provincia',
+      backgroundColor: 'hsla(163, 72%, 48%, .4)',
+      borderColor: 'hsla(163, 72%, 48%, 1.0)',
+      borderWidth: 1,
+      hoverBackgroundColor: 'hsla(163, 72%, 48%, .9)',
+      hoverBorderColor: 'hsla(163, 72%, 48%, 1)',
+      data: confirmedCases
+    }
+  ]
+};
+
 export function ConfirmedByProvinceChart() {
-  const { provinces } = useStats();
-  const sortedProvinces = provinces.sort((a, b) => {
-    return a.id - b.id;
-  });
-  const labels = sortedProvinces.map(province => province.name);
-  const confirmedCases = sortedProvinces.map(province => province.confirmed);
-  const confirmedByProvince = {
-    labels: labels,
-    datasets: [
-      {
-        label: 'Confirmados x Provincia',
-        backgroundColor: 'hsla(163, 72%, 48%, .4)',
-        borderColor: 'hsla(163, 72%, 48%, 1.0)',
-        borderWidth: 1,
-        hoverBackgroundColor: 'hsla(163, 72%, 48%, .9)',
-        hoverBorderColor: 'hsla(163, 72%, 48%, 1)',
-        data: confirmedCases
-      }
-    ]
-  };
   return (
     <>
       <ChartSection>
