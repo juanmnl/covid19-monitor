@@ -6,9 +6,9 @@ import { useTranslation } from 'react-i18next';
 export default function Stats({ url }) {
   const { t } = useTranslation();
   const nf = Intl.NumberFormat();
-  const { data, isLoading, error } = useFetch({ url });
+  const { data, isLoading, isError } = useFetch({ url });
   if (isLoading) return <p>{t('loading.label')}</p>;
-  if (error) return <p>{t('error.label')}</p>;
+  if (isError) return <p>{t('error.label')}</p>;
   return (
     <>
       <p>
