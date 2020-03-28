@@ -59,7 +59,7 @@ const dailyConfirmed = [
   91,
   171,
   224,
-  196
+  208
 ];
 
 const sum = dailyConfirmed.reduce((a, b) => a + b);
@@ -94,7 +94,7 @@ let dailyTotal = [
   1223,
   1394,
   1618,
-  1814
+  1826
 ];
 
 const confirmed = {
