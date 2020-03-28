@@ -3,12 +3,12 @@ import { useState, useEffect } from 'react';
 export default function useFetch({ url, apiKey = null }, initialData = null) {
   const [data, setData] = useState(initialData);
   const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(false);
+  const [isError, setIsError] = useState(false);
   useEffect(() => {
     let didCancel = false;
     async function fetchData() {
       setIsLoading(true);
-      setError();
+      setIsError(false);
 
       let options = {};
       const headers = new Headers();
@@ -23,12 +23,18 @@ export default function useFetch({ url, apiKey = null }, initialData = null) {
         .then(res => res.json())
         .catch(err => {
           if (!didCancel) {
-            setError(err);
+            setIsError(true);
           }
         });
+
       if (!didCancel) {
-        setData(data);
-        setIsLoading(false);
+        if (data.hasOwnProperty('error')) {
+          setIsLoading(false);
+          setIsError(true);
+        } else {
+          setData(data);
+          setIsLoading(false);
+        }
       }
     }
     fetchData();
@@ -40,6 +46,6 @@ export default function useFetch({ url, apiKey = null }, initialData = null) {
   return {
     data,
     isLoading,
-    error
+    isError
   };
 }

@@ -13,27 +13,21 @@ import {
 import Spinner from './Spinner';
 
 const Ecuador = ({ t }) => {
-  const { provinces, isLoading, error } = useStats();
+  const { provinces, lastDayTotals, isLoading, isError } = useStats();
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
   });
 
-  const dataTotals = {
-    confirmed: 1835,
-    deaths: 48,
-    suspicious: 2680,
-    negatives: 2100,
-    recoveries: 3,
-    tests: 6650
-  };
-
-  var result = (dataTotals.confirmed / dataTotals.tests) * 100;
+  const dateInArray = lastDayTotals.date.split('-');
+  const date = `${dateInArray[2]}.${dateInArray[1]}`;
+  var result = (lastDayTotals.confirmed / lastDayTotals.tests) * 100;
 
   return (
     <>
       <p>
         <small>
-          {t('updateDate.label')} 28.03 | 17:10 | {t('source.label')}{' '}
+          {t('updateDate.label')} {date} | {lastDayTotals.time} |{' '}
+          {t('source.label')}{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"
@@ -45,27 +39,27 @@ const Ecuador = ({ t }) => {
       </p>
       <StatGrid>
         <StatBlock>
-          <p>{dataTotals.confirmed}</p>
+          <p>{lastDayTotals.confirmed}</p>
           <h3>{t('confirmed.label')}</h3>
         </StatBlock>
         <StatBlock>
-          <p>{dataTotals.deaths}</p>
+          <p>{lastDayTotals.deaths}</p>
           <h3>{t('deaths.label')}</h3>
         </StatBlock>
         <StatBlock>
-          <p>{dataTotals.suspicious}</p>
+          <p>{lastDayTotals.suspicious}</p>
           <h3>{t('suspicious.label')}</h3>
         </StatBlock>
         <StatBlock>
-          <p>{dataTotals.negatives}</p>
+          <p>{lastDayTotals.negatives}</p>
           <h3>{t('negatives.label')}</h3>
         </StatBlock>
         <StatBlock>
-          <p>{dataTotals.recoveries}</p>
+          <p>{lastDayTotals.recoveries}</p>
           <h3>{t('recoveries.label')}</h3>
         </StatBlock>
         <StatBlock>
-          <p>{dataTotals.tests}</p>
+          <p>{lastDayTotals.tests}</p>
           <h3>{t('test.label')}</h3>
         </StatBlock>
         <StatBlock>
@@ -76,7 +70,7 @@ const Ecuador = ({ t }) => {
       <HeaderContainer>
         <h4>{t('confirmedPerRegion.label')}</h4>
         {isLoading && <Spinner />}
-        {error && <ErrorMessage>{t('error.label')}</ErrorMessage>}
+        {isError && <ErrorMessage>{t('error.label')}</ErrorMessage>}
       </HeaderContainer>
       <TwoCols>
         {sortedProvinces.map(province => (

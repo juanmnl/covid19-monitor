@@ -30,103 +30,45 @@ const ChartPieSection = styled.div`
 
 const datesArray = getDates(new Date('02/29/2020'), new Date());
 
-const dailyConfirmed = [
-  1,
-  5,
-  1,
-  0,
-  3,
-  3,
-  1,
-  0,
-  1,
-  0,
-  2,
-  0,
-  2,
-  4,
-  8,
-  9,
-  21,
-  53,
-  57,
-  92,
-  216,
-  106,
-  257,
-  192,
-  101,
-  91,
-  171,
-  224,
-  208
-];
-
-const sum = dailyConfirmed.reduce((a, b) => a + b);
-console.log(sum);
-
-let dailyTotal = [
-  1,
-  6,
-  7,
-  7,
-  10,
-  13,
-  14,
-  14,
-  15,
-  15,
-  17,
-  17,
-  19,
-  23,
-  28,
-  37,
-  58,
-  111,
-  168,
-  260,
-  476,
-  582,
-  839,
-  1031,
-  1132,
-  1223,
-  1394,
-  1618,
-  1826
-];
-
-const confirmed = {
-  labels: datesArray.map(date => date.displayFormat),
-  datasets: [
-    {
-      label: 'Confirmados Día',
-      pointBorderColor: 'hsla(163, 72%, 48%, 1.0)',
-      pointBackgroundColor: 'hsla(163, 72%, 48%, 0.7)',
-      backgroundColor: 'hsla(163, 72%, 48%, .4)',
-      borderColor: 'hsla(163, 72%, 48%, 1.0)',
-      borderWidth: 1,
-      hoverBackgroundColor: 'hsla(163, 72%, 48%, .9)',
-      hoverBorderColor: 'hsla(163, 72%, 48%, 1)',
-      pointRadius: 6,
-      pointStyle: 'mitter',
-      showLines: false,
-      data: dailyConfirmed
-    },
-    {
-      label: 'Confirmados Total',
-      data: dailyTotal,
-      pointBorderColor: 'hsla(25, 100%, 67%, 1.0)',
-      borderColor: 'hsla(25, 100%, 67%, 1.0)',
-      borderWidth: 1,
-      lineTension: 0,
-      type: 'line'
-    }
-  ]
-};
-
 export function ConfirmedChart() {
+  const { dailyTotals } = useStats();
+  const dailyConfirmed = dailyTotals.length ? [dailyTotals[0].confirmed] : [];
+  for (let i = 0; i < dailyTotals.length - 1; i++) {
+    dailyConfirmed.push(
+      dailyTotals[i + 1].confirmed - dailyTotals[i].confirmed
+    );
+  }
+
+  const acumulatedDailyConfirmed = dailyTotals.map(item => item.confirmed);
+
+  const confirmed = {
+    labels: datesArray.map(date => date.displayFormat),
+    datasets: [
+      {
+        label: 'Confirmados Día',
+        pointBorderColor: 'hsla(163, 72%, 48%, 1.0)',
+        pointBackgroundColor: 'hsla(163, 72%, 48%, 0.7)',
+        backgroundColor: 'hsla(163, 72%, 48%, .4)',
+        borderColor: 'hsla(163, 72%, 48%, 1.0)',
+        borderWidth: 1,
+        hoverBackgroundColor: 'hsla(163, 72%, 48%, .9)',
+        hoverBorderColor: 'hsla(163, 72%, 48%, 1)',
+        pointRadius: 6,
+        pointStyle: 'mitter',
+        showLines: false,
+        data: dailyConfirmed
+      },
+      {
+        label: 'Confirmados Total',
+        data: acumulatedDailyConfirmed,
+        pointBorderColor: 'hsla(25, 100%, 67%, 1.0)',
+        borderColor: 'hsla(25, 100%, 67%, 1.0)',
+        borderWidth: 1,
+        lineTension: 0,
+        type: 'line'
+      }
+    ]
+  };
   return (
     <>
       <ChartSection>
@@ -212,6 +154,7 @@ export function ConfirmedByProvinceChart() {
 }
 
 export function DetailsChart() {
+  const { lastDayTotals } = useStats();
   const { t } = useTranslation();
   const data = {
     labels: [
@@ -223,7 +166,13 @@ export function DetailsChart() {
     ],
     datasets: [
       {
-        data: [3, 1553, 121, 110, 48],
+        data: [
+          lastDayTotals.recoveries,
+          lastDayTotals.homeStable,
+          lastDayTotals.hospitalStable,
+          lastDayTotals.reserveState,
+          lastDayTotals.deaths
+        ],
         borderColor: 'hsla(164, 23%, 3%, 0.6)',
         backgroundColor: [
           'hsla(163, 72%, 100%, 0.9)',
