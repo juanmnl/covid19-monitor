@@ -223,7 +223,7 @@ export function DetailsChart() {
     ],
     datasets: [
       {
-        data: [3, 1565, 113, 94, 48],
+        data: [3, 1553, 121, 110, 48],
         borderColor: 'hsla(164, 23%, 3%, 0.6)',
         backgroundColor: [
           'hsla(163, 72%, 100%, 0.9)',
