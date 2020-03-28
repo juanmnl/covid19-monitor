@@ -2,7 +2,6 @@ import React from 'react';
 import { withTranslation } from 'react-i18next';
 import { useStats } from '../hooks/statsContext';
 import {
-  ErrorMessage,
   HeaderContainer,
   StatGrid,
   StatBlock,
@@ -10,10 +9,9 @@ import {
   Row,
   Separator
 } from '../components/StyledStats';
-import Spinner from './Spinner';
 
 const Ecuador = ({ t }) => {
-  const { provinces, lastDayTotals, isLoading, isError } = useStats();
+  const { provinces, lastDayTotals } = useStats();
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
   });
@@ -69,8 +67,6 @@ const Ecuador = ({ t }) => {
       </StatGrid>
       <HeaderContainer>
         <h4>{t('confirmedPerRegion.label')}</h4>
-        {isLoading && <Spinner />}
-        {isError && <ErrorMessage>{t('error.label')}</ErrorMessage>}
       </HeaderContainer>
       <TwoCols>
         {sortedProvinces.map(province => (

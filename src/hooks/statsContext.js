@@ -1,30 +1,22 @@
 import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { useTranslation } from 'react-i18next';
-import Spinner from '../components/Spinner';
+import LoadingPage from '../components/LoadingPage';
+import ErrorPage from '../components/ErrorPage';
 import useFetch from './useFetch';
 
 const AIRTABLE_API_KEY = process.env.REACT_APP_AIRTABLE_API_KEY;
+const PROVINCE_STATS_ENDPOINT = process.env.REACT_APP_PROVINCE_STATS_ENDPOINT;
+const TOTAL_STATS_ENDPOINT = process.env.REACT_APP_TOTAL_STATS_ENDPOINT;
 
 const StatsContext = React.createContext([]);
-const StatusPanel = styled.div`
-  height: 100%;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
 
 const StatsProvider = ({ children }) => {
   const { data, isLoading, isError } = useFetch(
     {
-      url:
-        'https://api.airtable.com/v0/appo8EvYg4prTdP9h/Table%201?view=Grid%20view',
+      url: PROVINCE_STATS_ENDPOINT,
       apiKey: AIRTABLE_API_KEY
     },
     { records: [] }
   );
-
   const provinces = data.records.map(item => ({ ...item.fields }));
 
   const {
@@ -33,8 +25,7 @@ const StatsProvider = ({ children }) => {
     isError: dailyIsError
   } = useFetch(
     {
-      url:
-        'https://api.airtable.com/v0/appo8EvYg4prTdP9h/Totals?view=Grid%20view',
+      url: TOTAL_STATS_ENDPOINT,
       apiKey: AIRTABLE_API_KEY
     },
     { records: [] }
@@ -62,28 +53,26 @@ const StatsProvider = ({ children }) => {
     };
   }
 
-  const { t } = useTranslation();
-
   const generalIsLoading = isLoading || dailyIsLoading;
   const generalIsError = isError || dailyIsError;
 
-  const status = generalIsError ? <p>{t('error.label')}</p> : <Spinner />;
+  if (generalIsError) {
+    return <ErrorPage />;
+  }
+
+  if (generalIsLoading) {
+    return <LoadingPage />;
+  }
 
   return (
     <StatsContext.Provider
       value={{
         provinces,
         lastDayTotals,
-        dailyTotals,
-        isLoading: generalIsLoading,
-        isError: generalIsError
+        dailyTotals
       }}
     >
-      {generalIsLoading || generalIsError ? (
-        <StatusPanel>{status}</StatusPanel>
-      ) : (
-        children
-      )}
+      {children}
     </StatsContext.Provider>
   );
 };
