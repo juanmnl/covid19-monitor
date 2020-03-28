@@ -23,6 +23,17 @@ Para desarrolladoras/es:
   REACT_APP_MAPBOX_ACCESS_TOKEN=token
 ```
 
+- Crear dos tablas en Airtable, se pueden crear importando los siguientes CSV de ejemplo:
+  - [Datos de provincias](https://github.com/SerotoninaAbad/covid19-csv-examples/blob/master/province-data.csv)
+  - [Totales diarios](https://github.com/SerotoninaAbad/covid19-csv-examples/blob/master/daily-totals.csv)
+  - Añadir  a `/.env.local` la API key de Airtable y los 2 endpoints para consultar las tablas creadas
+```
+  REACT_APP_AIRTABLE_API_KEY=airtable_key
+  REACT_APP_PROVINCE_STATS_ENDPOINT=airtable_provinces_endpoint
+  REACT_APP_TOTAL_STATS_ENDPOINT=airtable_total_stats_endpoint
+```
+
+
 - Ejecutar: `npm i && npm start`
 
 > Dudas para ejecutar la applicación? [Aquí una guía 🤓](./docs/run-instructions.md)
