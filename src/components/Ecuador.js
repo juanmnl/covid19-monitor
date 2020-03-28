@@ -19,12 +19,12 @@ const Ecuador = ({ t }) => {
   });
 
   const dataTotals = {
-    confirmed: 1627,
-    deaths: 41,
-    suspicious: 2347,
-    negatives: 1941,
+    confirmed: 1823,
+    deaths: 48,
+    suspicious: 2503,
+    negatives: 2076,
     recoveries: 3,
-    tests: 5915
+    tests: 6402
   };
 
   var result = (dataTotals.confirmed / dataTotals.tests) * 100;
@@ -33,7 +33,7 @@ const Ecuador = ({ t }) => {
     <>
       <p>
         <small>
-          {t('updateDate.label')} 27.03 | 17:30 | {t('source.label')}{' '}
+          {t('updateDate.label')} 28.03 | 11:00am | {t('source.label')}{' '}
           <a
             target="_blank"
             rel="noopener noreferrer"

@@ -58,7 +58,8 @@ const dailyConfirmed = [
   101,
   91,
   171,
-  224
+  224,
+  196
 ];
 
 const sum = dailyConfirmed.reduce((a, b) => a + b);
@@ -92,7 +93,8 @@ let dailyTotal = [
   1132,
   1223,
   1394,
-  1618
+  1618,
+  1814
 ];
 
 const confirmed = {
@@ -221,7 +223,7 @@ export function DetailsChart() {
     ],
     datasets: [
       {
-        data: [3, 1376, 113, 94, 41],
+        data: [3, 1565, 113, 94, 48],
         borderColor: 'hsla(164, 23%, 3%, 0.6)',
         backgroundColor: [
           'hsla(163, 72%, 100%, 0.9)',
