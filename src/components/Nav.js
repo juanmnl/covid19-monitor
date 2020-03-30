@@ -8,7 +8,7 @@ const isActive = ({ isCurrent }) => {
 };
 
 const Navigation = styled.nav`
-  background-color: var(--color-black);
+  background-color: var(--color-bg-dark);
   margin: 0.5rem 0;
   padding: 0.3rem 0.3rem;
   border-radius: 2px;
@@ -49,23 +49,23 @@ const Navigation = styled.nav`
   }
 `;
 
-const Nav = ({t}) => {
+const Nav = ({ t }) => {
   return (
     <Navigation>
       <Link to="/" getProps={isActive}>
-        {t("map.label")}
+        {t('map.label')}
       </Link>
       <Link to="contagios-provincia" getProps={isActive}>
-        {t("region.label")}
+        {t('region.label')}
       </Link>
       <Link to="contagios" getProps={isActive}>
-        {t("day.label")}
+        {t('day.label')}
       </Link>
       <Link to="detalles" getProps={isActive}>
-        {t("detail.label")}
+        {t('detail.label')}
       </Link>
     </Navigation>
   );
 };
 
-export default withTranslation()(Nav)
+export default withTranslation()(Nav);

@@ -76,6 +76,14 @@ export const StatBlock = styled.article`
     :nth-of-type(2) {
       border-color: var(--color-danger);
     }
+
+    :nth-of-type(6) {
+      border-color: var(--color-secondary);
+    }
+
+    :nth-of-type(7) {
+      border-color: var(--color-secondary);
+    }
   }
 
   @media (max-width: 960px) {

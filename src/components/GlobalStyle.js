@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-background: hsla(229, 19%, 16%, 1.0);
     --color-black: hsla(223, 13%, 11%, 1.0);
     --color-yellow: hsla(59, 100%, 67%, 1.0);
+    --color-bg-dark: hsla(236, 19%, 15%, 1.0);
   }
 
   * {
@@ -29,7 +30,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background-color: var(--color-background);
+    background-color: var(--color-bg-dark);
     color: var(--color-primary);
     height: 100vh;
     width: 100vw;
@@ -105,6 +106,7 @@ export const GlobalStyle = createGlobalStyle`
 
     > section {
       position: relative;
+      background-color: var(--color-background);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
