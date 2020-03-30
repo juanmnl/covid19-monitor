@@ -11,7 +11,7 @@ import {
 } from '../components/StyledStats';
 
 const Ecuador = ({ t }) => {
-  const { provinces, lastDayTotals } = useStats();
+  const { provinces, lastDayTotals, prevDayTotals } = useStats();
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
   });
@@ -19,6 +19,24 @@ const Ecuador = ({ t }) => {
   const dateInArray = lastDayTotals.date.split('-');
   const date = `${dateInArray[2]}.${dateInArray[1]}`;
   var result = (lastDayTotals.confirmed / lastDayTotals.tests) * 100;
+  var confirmedDiff = lastDayTotals.confirmed - prevDayTotals.confirmed;
+  var deathsDiff = lastDayTotals.deaths - prevDayTotals.deaths;
+  var suspiciousDiff = lastDayTotals.suspicious - prevDayTotals.suspicious;
+  var negativesDiff = lastDayTotals.negatives - prevDayTotals.negatives;
+  var recoveriesDiff = lastDayTotals.recoveries - prevDayTotals.recoveries;
+  var testsDiff = lastDayTotals.tests - prevDayTotals.tests;
+  var ratioDiff =
+    result - (prevDayTotals.confirmed / prevDayTotals.tests) * 100;
+
+  var isPositive = val => {
+    if (val === 0) {
+      return null;
+    } else if (val < 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
 
   return (
     <>
@@ -37,30 +55,62 @@ const Ecuador = ({ t }) => {
       </p>
       <StatGrid>
         <StatBlock>
+          <span>
+            {isPositive(confirmedDiff) ? '+' : '-'}
+            {confirmedDiff}
+          </span>
           <p>{lastDayTotals.confirmed}</p>
           <h3>{t('confirmed.label')}</h3>
         </StatBlock>
         <StatBlock>
+          <span>
+            {isPositive(deathsDiff) ? '+' : '-'}
+            {deathsDiff}
+          </span>
+
           <p>{lastDayTotals.deaths}</p>
           <h3>{t('deaths.label')}</h3>
         </StatBlock>
         <StatBlock>
+          <span>
+            {isPositive(deathsDiff) ? '+' : '-'}
+            {suspiciousDiff}
+          </span>
+
           <p>{lastDayTotals.suspicious}</p>
           <h3>{t('suspicious.label')}</h3>
         </StatBlock>
         <StatBlock>
+          <span>
+            {isPositive(negativesDiff) ? '+' : '-'}
+            {negativesDiff}
+          </span>
           <p>{lastDayTotals.negatives}</p>
           <h3>{t('negatives.label')}</h3>
         </StatBlock>
         <StatBlock>
+          <span>
+            {isPositive(recoveriesDiff) ? '+' : '-'}
+            {recoveriesDiff}
+          </span>
           <p>{lastDayTotals.recoveries}</p>
           <h3>{t('recoveries.label')}</h3>
         </StatBlock>
+      </StatGrid>
+      <StatGrid>
         <StatBlock>
+          <span>
+            {isPositive(testsDiff) ? '+' : '-'}
+            {testsDiff}
+          </span>
           <p>{lastDayTotals.tests}</p>
           <h3>{t('test.label')}</h3>
         </StatBlock>
         <StatBlock>
+          <span>
+            {isPositive(ratioDiff) ? '+' : ''}
+            {ratioDiff.toFixed(2)}%
+          </span>
           <p>{result.toFixed(2)}% </p>
           <h3>{t('rate.label')}</h3>
         </StatBlock>

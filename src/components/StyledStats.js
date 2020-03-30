@@ -15,9 +15,10 @@ export const HeaderContainer = styled.div`
 export const StatGrid = styled.section`
   display: flex;
   flex-wrap: wrap;
-
-  @media (max-width: 960px) {
-    flex-direction: column;
+  :nth-of-type(2) {
+    > article {
+      color: var(--color-secondary);
+    }
   }
 `;
 
@@ -27,7 +28,7 @@ export const StatBlock = styled.article`
   color: var(--color-primary);
   flex-direction: column;
   padding: 0.6rem 0.8rem;
-  box-shadow: 0 1px 1px hsla(163, 72%, 0%, 0.7), 0 -1px 0 var(--color-black);
+  box-shadow: 0 1px 1px var(--color-black), 0 -1px 1px var(--color-bg-dark);
   border: 1px solid var(--color-black);
   border-radius: 2px;
   transition: box-shadow 150ms ease-in;
@@ -65,6 +66,12 @@ export const StatBlock = styled.article`
     font-weight: 900;
   }
 
+  > span {
+    font-size: 0.65rem;
+    margin: 0.2rem 0.1rem;
+    font-weight: 600;
+  }
+
   :hover {
     border-color: var(--color-primary);
     transition: all 300ms ease-in;
@@ -88,7 +95,7 @@ export const StatBlock = styled.article`
 
   @media (max-width: 960px) {
     margin: 0.5rem 0rem;
-    text-align: center;
+    border-radius: 1px;
   }
 `;
 
