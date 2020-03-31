@@ -11,20 +11,50 @@ import {
 } from '../components/StyledStats';
 
 const Ecuador = ({ t }) => {
-  const { provinces, lastDayTotals, prevDayTotals } = useStats();
+  const {
+    provinces,
+    lastDayTotals,
+    prevDayTotals,
+    beforeYesterdayTotals
+  } = useStats();
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
   });
 
   const dateInArray = lastDayTotals.date.split('-');
   const date = `${dateInArray[2]}.${dateInArray[1]}`;
-  var result = (lastDayTotals.confirmed / lastDayTotals.tests) * 100;
+  var result =
+    (lastDayTotals.confirmed /
+      (lastDayTotals.negatives + lastDayTotals.confirmed)) *
+    100;
   var confirmedDiff = lastDayTotals.confirmed - prevDayTotals.confirmed;
   var deathsDiff = lastDayTotals.deaths - prevDayTotals.deaths;
   var suspiciousDiff = lastDayTotals.suspicious - prevDayTotals.suspicious;
   var negativesDiff = lastDayTotals.negatives - prevDayTotals.negatives;
   var recoveriesDiff = lastDayTotals.recoveries - prevDayTotals.recoveries;
   var testsDiff = lastDayTotals.tests - prevDayTotals.tests;
+
+  var analysisDiff =
+    lastDayTotals.tests -
+    (lastDayTotals.negatives + lastDayTotals.confirmed) -
+    (prevDayTotals.tests - (prevDayTotals.negatives + prevDayTotals.confirmed));
+
+  var yesterdayAnalysisDiff =
+    prevDayTotals.tests -
+    (prevDayTotals.negatives + prevDayTotals.confirmed) -
+    (beforeYesterdayTotals.tests -
+      (beforeYesterdayTotals.negatives + beforeYesterdayTotals.confirmed));
+
+  var analizedToday = lastDayTotals.tests - prevDayTotals.tests - analysisDiff;
+
+  var analyzedYesterday =
+    prevDayTotals.tests - beforeYesterdayTotals.tests - yesterdayAnalysisDiff;
+
+  var analyzedTodayDiff = analizedToday - analyzedYesterday;
+
+  var inAnalysis =
+    lastDayTotals.tests - (lastDayTotals.negatives + lastDayTotals.confirmed);
+
   var ratioDiff =
     result - (prevDayTotals.confirmed / prevDayTotals.tests) * 100;
 
@@ -97,14 +127,31 @@ const Ecuador = ({ t }) => {
           <h3>{t('recoveries.label')}</h3>
         </StatBlock>
       </StatGrid>
+
       <StatGrid>
         <StatBlock>
           <span>
-            {isPositive(testsDiff) ? '+' : '-'}
+            {isPositive(testsDiff) ? '+' : ''}
             {testsDiff}
           </span>
           <p>{lastDayTotals.tests}</p>
           <h3>{t('test.label')}</h3>
+        </StatBlock>
+        <StatBlock>
+          <span>
+            {isPositive(analyzedTodayDiff) ? '+' : ''}
+            {analyzedTodayDiff}
+          </span>
+          <p>{analizedToday}</p>
+          <h3>{t('today.label')}</h3>
+        </StatBlock>
+        <StatBlock>
+          <span>
+            {isPositive(analysisDiff) ? '+' : ''}
+            {analysisDiff}
+          </span>
+          <p>{inAnalysis}</p>
+          <h3>{t('testInProgress.label')}</h3>
         </StatBlock>
         <StatBlock>
           <span>
@@ -115,6 +162,7 @@ const Ecuador = ({ t }) => {
           <h3>{t('rate.label')}</h3>
         </StatBlock>
       </StatGrid>
+
       <HeaderContainer>
         <h4>{t('confirmedPerRegion.label')}</h4>
       </HeaderContainer>

@@ -1,6 +1,6 @@
 {
-  "short_name": "Monitor EC | Covid-19",
-  "name": "Un prototipo para la visualización de datos, sobre la proliferación del COVID-19 en el Ecuador.",
+  "short_name": "Monitor EC",
+  "name": "Una interface para la visualización de datos, sobre la proliferación del COVID-19 en el Ecuador.",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#BCD4CF",
+  "background_color": "#2F3656"
 }

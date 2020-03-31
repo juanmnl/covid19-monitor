@@ -18,6 +18,10 @@ export const StatGrid = styled.section`
   :nth-of-type(2) {
     > article {
       color: var(--color-secondary);
+      :hover {
+        border-color: var(--color-secondary);
+        transition: all 300ms ease-in;
+      }
     }
   }
 `;
@@ -42,14 +46,6 @@ export const StatBlock = styled.article`
 
   :nth-of-type(2) {
     color: var(--color-danger);
-  }
-
-  :nth-of-type(6) {
-    color: var(--color-secondary);
-  }
-
-  :nth-of-type(7) {
-    color: var(--color-secondary);
   }
 
   > h3 {
@@ -85,10 +81,6 @@ export const StatBlock = styled.article`
     }
 
     :nth-of-type(6) {
-      border-color: var(--color-secondary);
-    }
-
-    :nth-of-type(7) {
       border-color: var(--color-secondary);
     }
   }

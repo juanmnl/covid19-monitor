@@ -36,9 +36,11 @@ const StatsProvider = ({ children }) => {
 
   let lastDayTotals;
   let prevDayTotals;
+  let beforeYesterdayTotals;
   if (dailyTotals.length) {
     lastDayTotals = { ...dailyTotals[dailyTotals.length - 1] };
     prevDayTotals = { ...dailyTotals[dailyTotals.length - 2] };
+    beforeYesterdayTotals = { ...dailyTotals[dailyTotals.length - 3] };
   } else {
     lastDayTotals = {
       date: '0000-00-00',
@@ -72,6 +74,7 @@ const StatsProvider = ({ children }) => {
         provinces,
         lastDayTotals,
         prevDayTotals,
+        beforeYesterdayTotals,
         dailyTotals
       }}
     >
