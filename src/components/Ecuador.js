@@ -23,10 +23,6 @@ const Ecuador = ({ t }) => {
 
   const dateInArray = lastDayTotals.date.split('-');
   const date = `${dateInArray[2]}.${dateInArray[1]}`;
-  var result =
-    (lastDayTotals.confirmed /
-      (lastDayTotals.negatives + lastDayTotals.confirmed)) *
-    100;
   var confirmedDiff = lastDayTotals.confirmed - prevDayTotals.confirmed;
   var deathsDiff = lastDayTotals.deaths - prevDayTotals.deaths;
   var suspiciousDiff = lastDayTotals.suspicious - prevDayTotals.suspicious;
@@ -55,8 +51,17 @@ const Ecuador = ({ t }) => {
   var inAnalysis =
     lastDayTotals.tests - (lastDayTotals.negatives + lastDayTotals.confirmed);
 
-  var ratioDiff =
-    result - (prevDayTotals.confirmed / prevDayTotals.tests) * 100;
+  var positiveRatio =
+    (lastDayTotals.confirmed /
+      (lastDayTotals.negatives + lastDayTotals.confirmed)) *
+    100;
+
+  var prevPositiveRatio =
+    (beforeYesterdayTotals.confirmed /
+      (beforeYesterdayTotals.negatives + beforeYesterdayTotals.confirmed)) *
+    100;
+
+  var ratioDiff = positiveRatio - prevPositiveRatio;
 
   var isPositive = val => {
     if (val === 0) {
@@ -158,7 +163,7 @@ const Ecuador = ({ t }) => {
             {isPositive(ratioDiff) ? '+' : ''}
             {ratioDiff.toFixed(2)}%
           </span>
-          <p>{result.toFixed(2)}% </p>
+          <p>{positiveRatio.toFixed(2)}% </p>
           <h3>{t('rate.label')}</h3>
         </StatBlock>
       </StatGrid>
