@@ -15,6 +15,7 @@
   "suspicious.label": "Unkunalla runakuna",
   "negatives.label": "Kishpirishka runakuna",
   "recoveries.label": "Alta Hosp.",
+  "ActualRecoveries.label": "Recuperados",
   "test.label": "Pruebas tomadas",
   "testInProgress.label": "Por analizar",
   "today.label": "Resultados hoy",

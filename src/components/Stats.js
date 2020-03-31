@@ -27,7 +27,7 @@ export default function Stats({ url }) {
         </StatBlock>
         <StatBlock>
           <p>{nf.format(data.recovered.value)}</p>
-          <h3>{t('recoveries.label')}</h3>
+          <h3>{t('ActualRecoveries.label')}</h3>
         </StatBlock>
       </StatGrid>
     </>

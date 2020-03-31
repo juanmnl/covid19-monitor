@@ -15,6 +15,7 @@
   "suspicious.label": "Suspicious",
   "negatives.label": "Negatives",
   "recoveries.label": "Out of Hospital",
+  "ActualRecoveries.label": "Recoveries",
   "test.label": "Test",
   "testInProgress.label": "In Progress",
   "today.label": "Results today",

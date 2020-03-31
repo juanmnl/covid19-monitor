@@ -15,6 +15,7 @@
   "suspicious.label": "Sospecha",
   "negatives.label": "Descartados",
   "recoveries.label": "Alta Hosp.",
+  "ActualRecoveries.label": "Recuperados",
   "test.label": "Pruebas tomadas",
   "testInProgress.label": "Por analizar",
   "today.label": "Resultados hoy",
@@ -23,7 +24,7 @@
   "homeStable.label": "Estables/Domicilio",
   "hospitalStable.label": "Estables/Hospital",
   "reserveState.label": "Pronóstico Reservado/Hospital",
-  "loading.label": "Loading...",
+  "loading.label": "Cargando...",
   "error.label": "Ha ocurrido un error.",
   "github.link": "Me ayudas?"
 }
