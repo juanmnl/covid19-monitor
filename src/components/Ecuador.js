@@ -17,6 +17,7 @@ const Ecuador = ({ t }) => {
     prevDayTotals,
     beforeYesterdayTotals
   } = useStats();
+
   const sortedProvinces = provinces.sort((a, b) => {
     return b.confirmed - a.confirmed;
   });
@@ -35,7 +36,7 @@ const Ecuador = ({ t }) => {
     (lastDayTotals.negatives + lastDayTotals.confirmed) -
     (prevDayTotals.tests - (prevDayTotals.negatives + prevDayTotals.confirmed));
 
-  var yesterdayAnalysisDiff =
+  var prevAnalysisDiff =
     prevDayTotals.tests -
     (prevDayTotals.negatives + prevDayTotals.confirmed) -
     (beforeYesterdayTotals.tests -
@@ -44,7 +45,7 @@ const Ecuador = ({ t }) => {
   var analizedToday = lastDayTotals.tests - prevDayTotals.tests - analysisDiff;
 
   var analyzedYesterday =
-    prevDayTotals.tests - beforeYesterdayTotals.tests - yesterdayAnalysisDiff;
+    prevDayTotals.tests - beforeYesterdayTotals.tests - prevAnalysisDiff;
 
   var analyzedTodayDiff = analizedToday - analyzedYesterday;
 
