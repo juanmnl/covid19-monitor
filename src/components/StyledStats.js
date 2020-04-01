@@ -20,7 +20,14 @@ export const StatGrid = styled.section`
       color: var(--color-secondary);
       :hover {
         border-color: var(--color-secondary);
-        transition: all 300ms ease-in;
+      }
+    }
+  }
+  :nth-of-type(1) {
+    > article:nth-of-type(3):not(:last-child) {
+      color: var(--color-danger);
+      :hover {
+        border-color: var(--color-danger);
       }
     }
   }
@@ -31,7 +38,7 @@ export const StatBlock = styled.article`
   flex: 1;
   color: var(--color-primary);
   flex-direction: column;
-  padding: 0.6rem 0.8rem;
+  padding: 0.5rem;
   box-shadow: 0 1px 1px var(--color-black), 0 -1px 1px var(--color-bg-dark);
   border: 1px solid var(--color-black);
   border-radius: 2px;
@@ -49,7 +56,7 @@ export const StatBlock = styled.article`
   }
 
   > h3 {
-    font-size: 0.6rem;
+    font-size: 0.58rem;
     text-transform: uppercase;
     margin: 0;
     font-weight: 300;
@@ -57,7 +64,7 @@ export const StatBlock = styled.article`
   }
 
   > p {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     flex: 2;
     font-weight: 900;
   }

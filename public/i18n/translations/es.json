@@ -11,6 +11,7 @@
   "source.label": "Fuente:",
   "confirmed.label": "Confirmados",
   "deaths.label": "Fallecidos",
+  "possibleDeaths.label": "'Posible' total",
   "surveillance.label": "Cerco",
   "suspicious.label": "Sospecha",
   "negatives.label": "Descartados",

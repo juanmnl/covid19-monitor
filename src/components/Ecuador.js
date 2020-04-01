@@ -26,10 +26,14 @@ const Ecuador = ({ t }) => {
   const date = `${dateInArray[2]}.${dateInArray[1]}`;
   var confirmedDiff = lastDayTotals.confirmed - prevDayTotals.confirmed;
   var deathsDiff = lastDayTotals.deaths - prevDayTotals.deaths;
+  var possibleDeathsDiff =
+    lastDayTotals.possibleDeaths - prevDayTotals.possibleDeaths;
   var suspiciousDiff = lastDayTotals.suspicious - prevDayTotals.suspicious;
   var negativesDiff = lastDayTotals.negatives - prevDayTotals.negatives;
   var recoveriesDiff = lastDayTotals.recoveries - prevDayTotals.recoveries;
   var testsDiff = lastDayTotals.tests - prevDayTotals.tests;
+
+  var possibleTotalDeaths = lastDayTotals.deaths + lastDayTotals.possibleDeaths;
 
   var analysisDiff =
     lastDayTotals.tests -
@@ -92,7 +96,7 @@ const Ecuador = ({ t }) => {
       <StatGrid>
         <StatBlock>
           <span>
-            {isPositive(confirmedDiff) ? '+' : '-'}
+            {isPositive(confirmedDiff) ? '+' : ''}
             {confirmedDiff}
           </span>
           <p>{lastDayTotals.confirmed}</p>
@@ -100,25 +104,33 @@ const Ecuador = ({ t }) => {
         </StatBlock>
         <StatBlock>
           <span>
-            {isPositive(deathsDiff) ? '+' : '-'}
+            {isPositive(deathsDiff) ? '+' : ''}
             {deathsDiff}
           </span>
-
           <p>{lastDayTotals.deaths}</p>
           <h3>{t('deaths.label')}</h3>
         </StatBlock>
         <StatBlock>
           <span>
-            {isPositive(deathsDiff) ? '+' : '-'}
+            {isPositive(possibleDeathsDiff) ? '+' : ''}
+            {possibleDeathsDiff}
+          </span>
+          <p>{possibleTotalDeaths}</p>
+          <h3>
+            <em>{t('possibleDeaths.label')}</em>
+          </h3>
+        </StatBlock>
+        <StatBlock>
+          <span>
+            {isPositive(suspiciousDiff) ? '+' : ''}
             {suspiciousDiff}
           </span>
-
           <p>{lastDayTotals.suspicious}</p>
           <h3>{t('suspicious.label')}</h3>
         </StatBlock>
         <StatBlock>
           <span>
-            {isPositive(negativesDiff) ? '+' : '-'}
+            {isPositive(negativesDiff) ? '+' : ''}
             {negativesDiff}
           </span>
           <p>{lastDayTotals.negatives}</p>
@@ -126,7 +138,7 @@ const Ecuador = ({ t }) => {
         </StatBlock>
         <StatBlock>
           <span>
-            {isPositive(recoveriesDiff) ? '+' : '-'}
+            {isPositive(recoveriesDiff) ? '+' : ''}
             {recoveriesDiff}
           </span>
           <p>{lastDayTotals.recoveries}</p>

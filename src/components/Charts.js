@@ -47,15 +47,14 @@ export function ConfirmedChart() {
       {
         label: 'Confirmados Día',
         pointBorderColor: 'hsla(163, 72%, 48%, 1.0)',
-        pointBackgroundColor: 'hsla(163, 72%, 48%, 0.7)',
+        pointBackgroundColor: 'hsla(163, 72%, 48%, 1)',
         backgroundColor: 'hsla(163, 72%, 48%, .4)',
         borderColor: 'hsla(163, 72%, 48%, 1.0)',
         borderWidth: 1,
         hoverBackgroundColor: 'hsla(163, 72%, 48%, .9)',
         hoverBorderColor: 'hsla(163, 72%, 48%, 1)',
-        pointRadius: 6,
-        pointStyle: 'mitter',
-        showLines: false,
+        pointRadius: 3,
+        pointStyle: 'rectRounded',
         data: dailyConfirmed
       },
       {
@@ -63,7 +62,7 @@ export function ConfirmedChart() {
         data: acumulatedDailyConfirmed,
         pointBorderColor: 'hsla(25, 100%, 67%, 1.0)',
         borderColor: 'hsla(25, 100%, 67%, 1.0)',
-        borderWidth: 1,
+        borderWidth: 1.5,
         lineTension: 0,
         type: 'line'
       }
@@ -91,7 +90,6 @@ export function ConfirmedChart() {
               yAxes: [
                 {
                   type: 'logarithmic',
-                  stacked: true,
                   ticks: {
                     callback: function(value, index, values) {
                       return value;
