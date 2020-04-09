@@ -28,7 +28,6 @@ const Ecuador = ({ t }) => {
   var deathsDiff = lastDayTotals.deaths - prevDayTotals.deaths;
   var possibleDeathsDiff =
     lastDayTotals.possibleDeaths - prevDayTotals.possibleDeaths;
-  var suspiciousDiff = lastDayTotals.suspicious - prevDayTotals.suspicious;
   var negativesDiff = lastDayTotals.negatives - prevDayTotals.negatives;
   var recoveriesDiff = lastDayTotals.recoveries - prevDayTotals.recoveries;
   var testsDiff = lastDayTotals.tests - prevDayTotals.tests;
@@ -119,14 +118,6 @@ const Ecuador = ({ t }) => {
           <h3>
             <em>{t('possibleDeaths.label')}</em>
           </h3>
-        </StatBlock>
-        <StatBlock>
-          <span>
-            {isPositive(suspiciousDiff) ? '+' : ''}
-            {suspiciousDiff}
-          </span>
-          <p>{lastDayTotals.suspicious}</p>
-          <h3>{t('suspicious.label')}</h3>
         </StatBlock>
         <StatBlock>
           <span>
