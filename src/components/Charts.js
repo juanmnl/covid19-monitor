@@ -26,8 +26,6 @@ const ChartPieSection = styled.div`
   }
 `;
 
-// Usar esto para casos diarios (barras) y crear curva log() en nueva sección "La curva"
-
 const datesArray = getDates(new Date('02/29/2020'), new Date());
 
 export function ConfirmedChart() {
