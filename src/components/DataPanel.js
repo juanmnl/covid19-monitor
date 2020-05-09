@@ -11,7 +11,6 @@ import { withTranslation } from 'react-i18next';
 const DataPanel = ({ t }) => {
   return (
     <section>
-      <Warning />
       <Heading />
       <Nav />
       <div>
