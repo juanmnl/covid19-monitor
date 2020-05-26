@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
+import { getCSVFile } from '../utils/parser';
 
-export default function useFetch({ url, apiKey = null }, initialData = null) {
+export default function useCSVParser({ url }, initialData = null) {
   const [data, setData] = useState(initialData);
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
@@ -11,21 +12,10 @@ export default function useFetch({ url, apiKey = null }, initialData = null) {
       setIsLoading(true);
       setIsError(false);
 
-      let options = {};
-      options = {
-        method: 'GET',
-      };
-
       try {
-        const response = await fetch(url, options);
-        if (!response.ok) {
-          throw new Error();
-        }
-        const data = await response.json();
-        if (!didCancel) {
-          setData(data);
-          setIsLoading(false);
-        }
+        const data = await getCSVFile(url)
+        setData(data);
+        setIsLoading(false);
       } catch (err) {
         if (!didCancel) {
           setIsError(true);
@@ -38,7 +28,7 @@ export default function useFetch({ url, apiKey = null }, initialData = null) {
     return () => {
       didCancel = true;
     };
-  }, [url, apiKey]);
+  }, [url]);
   return {
     data,
     isLoading,

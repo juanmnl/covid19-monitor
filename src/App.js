@@ -23,7 +23,8 @@ export default function App() {
                 <MapChart path="/" />
                 <ConfirmedChart path="/contagios" />
                 <ConfirmedByProvinceChart path="/contagios-provincia" />
-                <DetailsChart path="/detalles" />
+                {/* TODO: Imeplement source for recoveries */}
+                {/* <DetailsChart path="/detalles" /> */} 
               </Router>
             </section>
           </StatsProvider>

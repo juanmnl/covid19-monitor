@@ -22,8 +22,7 @@ const Ecuador = ({ t }) => {
     return b.confirmed - a.confirmed;
   });
 
-  const dateInArray = lastDayTotals.date.split('-');
-  const date = `${dateInArray[2]}.${dateInArray[1]}`;
+  const date = lastDayTotals.date;
   var confirmedDiff = lastDayTotals.confirmed - prevDayTotals.confirmed;
   var deathsDiff = lastDayTotals.deaths - prevDayTotals.deaths;
   var possibleDeathsDiff =
@@ -127,17 +126,17 @@ const Ecuador = ({ t }) => {
           <p>{lastDayTotals.negatives}</p>
           <h3>{t('negatives.label')}</h3>
         </StatBlock>
-        <StatBlock>
+        {/* <StatBlock> //TODO: Implement services to look for recoveries
           <span>
             {isPositive(recoveriesDiff) ? '+' : ''}
             {recoveriesDiff}
           </span>
           <p>{lastDayTotals.recoveries}</p>
           <h3>{t('recoveries.label')}</h3>
-        </StatBlock>
+        </StatBlock> */}
       </StatGrid>
 
-      <StatGrid>
+      {/* <StatGrid> //TODO: Implement services to look for tests
         <StatBlock>
           <span>
             {isPositive(testsDiff) ? '+' : ''}
@@ -170,7 +169,7 @@ const Ecuador = ({ t }) => {
           <p>{positiveRatio.toFixed(2)}% </p>
           <h3>{t('rate.label')}</h3>
         </StatBlock>
-      </StatGrid>
+      </StatGrid> */}
 
       <HeaderContainer>
         <h4>{t('confirmedPerRegion.label')}</h4>

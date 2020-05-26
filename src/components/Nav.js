@@ -61,9 +61,10 @@ const Nav = ({ t }) => {
       <Link to="contagios" getProps={isActive}>
         {t('day.label')}
       </Link>
-      <Link to="detalles" getProps={isActive}>
+      {/* TODO: Implement source for recoveries */}
+      {/* <Link to="detalles" getProps={isActive}>
         {t('detail.label')}
-      </Link>
+      </Link> */}
     </Navigation>
   );
 };
